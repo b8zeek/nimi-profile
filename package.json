@@ -8,5 +8,9 @@
     "nimi"
   ],
   "author": "https://github.com/bejzik8",
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "dependencies": {
+    "react": "^18.0.0",
+    "typescript": "^4.8.4"
+  }
 }
