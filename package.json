@@ -1,0 +1,12 @@
+{
+  "name": "nimi",
+  "version": "1.0.0",
+  "description": "Nimi component.",
+  "main": "src/index.ts",
+  "scripts": {},
+  "keywords": [
+    "nimi"
+  ],
+  "author": "https://github.com/bejzik8",
+  "license": "UNLICENSED"
+}
