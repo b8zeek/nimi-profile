@@ -3,18 +3,27 @@
   "version": "1.0.0",
   "description": "Nimi component.",
   "main": "src/index.ts",
+  "files": [
+    "src/**/*"
+  ],
   "scripts": {},
   "keywords": [
     "nimi"
   ],
   "author": "https://github.com/bejzik8",
   "license": "UNLICENSED",
-  "dependencies": {
-    "react": "^18.0.0",
+  "devDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "styled-components": "^5.3.6",
     "typescript": "^4.8.4"
   },
-  "devDependencies": {
-    "@types/styled-components": "^5.1.26"
+  "peerDependencies": {
+    "@types/styled-components": "^5.1.26",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.6",
+    "typescript": "^4.8.4"
   }
 }
