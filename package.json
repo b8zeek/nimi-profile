@@ -4,7 +4,8 @@
   "description": "Nimi component.",
   "main": "src/index.ts",
   "files": [
-    "src/**/*"
+    "src/index.ts",
+    "src/components/*"
   ],
   "scripts": {
     "storybook": "start-storybook -p 6006",
