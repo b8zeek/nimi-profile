@@ -1,15 +1,14 @@
 // import React from 'react'
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
-import { Button } from '../components/Button'
-import { NimiComponent } from '../components';
+import { NimiComponent } from './NimiComponent';
 import {
     Nimi,
     NimiImageType,
     NimiBlockchain,
     NimiLinkType,
     NimiWidgetType
-} from '../types';
+} from '../../types';
 
 const nimi: Nimi = {
     displayName: "Nimi",
