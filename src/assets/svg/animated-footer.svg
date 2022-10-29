@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-3 -20 583 118">
+    <defs>
+        <linearGradient id="text-path-gradient" x1="480" y1="244" x2="324" y2="-61" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#4368EA"/>
+            <stop offset="1" stop-color="#C490DD"/>
+        </linearGradient>
+        <clipPath id="text-path-clip">
+            <rect x="-3" y="-20" width="583" height="130" />
+        </clipPath>
+        <path id="text-path" d="M562.1,130.2H15.4c0-60.4,47.3-108,109.3-109.3l328,0C512.3,20.9,562.1,69.9,562.1,130.2z"/>
+    </defs>
+
+    <use xlink:href="#text-path" opacity="0.8" fill="url(#text-path-gradient)" />
+
+    <text fill="url(#text-path-gradient)" clip-path="url(#text-path-clip)" font-size="13" dy="-7">
+        <textPath id="animated-text-path" xlink:href="#text-path" >
+            THIS PERSONAL SPACE IS OWNED AND SECURED ON WEB3 • THIS PERSONAL SPACE IS OWNED AND SECURED ON WEB3 • THIS PERSONAL SPACE IS OWNED AND SECURED ON WEB3 •THIS PERSONAL SPACE IS OWNED AND SECURED ON WEB3 • THIS PERSONAL SPACE IS OWNED AND SECURED ON WEB3 •
+        </textPath>
+    </text>
+</svg>

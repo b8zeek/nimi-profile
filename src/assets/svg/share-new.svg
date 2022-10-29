@@ -1,0 +1,5 @@
+<svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path className='svg-path-stroke' d="M7 0.875C2.625 0.875 1.375 2.125 1.375 6.5C1.375 10.875 2.625 12.125 7 12.125C10.3086 12.125 11.8299 11.4101 12.375 9.3125" stroke="#343EDF" stroke-linecap="round" stroke-linejoin="round"/>
+<path className='svg-path-stroke' d="M4.5 7.75C4.5 6.5 5.125 4.625 7.93748 4.625C11.6079 4.625 11.997 4.625 11.997 4.625" stroke="#343EDF" stroke-linecap="round" stroke-linejoin="round"/>
+<path  className='svg-path-stroke' d="M10.125 2.125L12.625 4.625L10.125 7.125" stroke="#343EDF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
