@@ -12,7 +12,7 @@ export function NimiSection({ children, marginBottom }: NimiSectionProps) {
   return <Container marginBottom={marginBottom}>{children}</Container>;
 }
 
-function getSectionColors(themeType) {
+function getSectionColors(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return css`
