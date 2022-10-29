@@ -10,7 +10,7 @@ export type NimiPOAPWidgetContext = {
 /**
  * Extend this to add new widget context
  */
-export type NimiWidget<WidgetType = keyof typeof NimiWidgetType, ContextType = Record<string, never>> = {
+export type NimiWidget<WidgetType = keyof typeof NimiWidgetType, ContextType = Record<string, never | string[]>> = {
   type: WidgetType;
   context?: ContextType;
 };
