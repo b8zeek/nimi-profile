@@ -15,7 +15,7 @@ const GradientAnimation = keyframes`
   }
 `;
 
-function getPageBackground(themeType) {
+function getPageBackground(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return 'background: #fff';
@@ -36,7 +36,7 @@ function getPageBackground(themeType) {
   }
 }
 
-function getTextColor(themeType) {
+function getTextColor(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return 'color: rgba(33, 33, 35, 0.65);';
@@ -92,8 +92,8 @@ type ThemeProviderProps = {
   children: ReactNode;
 };
 
-export function ThemeProvider({ theme, children }: ThemeProviderProps) {
-  const getBackgroundImage = (themeType) => {
+export function ThemeProvider({ theme = { type: NimiThemeType.DAIVINITY }, children }: ThemeProviderProps) {
+  const getBackgroundImage = (themeType: string) => {
     switch (themeType) {
       case NimiThemeType.NIMI:
         return (
