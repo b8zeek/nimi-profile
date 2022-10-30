@@ -17,7 +17,7 @@ export function POAPWidget({ ensAddress, widget }: POAPWidgetProps) {
 
   return (
     <Container>
-      <POAPHeading showFullCollection={() => window.open(`https://app.poap.xyz/scan/${ensAddress}`, '_blank')} />
+      {/* <POAPHeading showFullCollection={() => window.open(`https://app.poap.xyz/scan/${ensAddress}`, '_blank')} /> */}
       <NimiSection>
         <POAPList>
           {poapList.map((poap) => (
