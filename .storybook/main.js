@@ -9,13 +9,13 @@ module.exports = {
     "@storybook/addon-interactions"
   ],
   "framework": "@storybook/react",
-  webpackFinal: async (config) => {
-    config.module.rules.push({
-      test: /\.mjs$/,
-      include: /node_modules/,
-      type: "javascript/auto",
-    })
+  // webpackFinal: async (config) => {
+  //   config.module.rules.push({
+  //     test: /\.mjs$/,
+  //     include: /node_modules/,
+  //     type: "javascript/auto",
+  //   })
 
-    return config
-  }
+  //   return config
+  // }
 }

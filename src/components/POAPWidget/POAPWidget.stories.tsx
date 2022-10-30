@@ -1,17 +1,17 @@
-import { ComponentMeta } from '@storybook/react'
-import styled from 'styled-components'
+// import { ComponentMeta } from '@storybook/react'
+// import styled from 'styled-components'
 
-import { POAPWidget } from './POAPWidget'
+// import { POAPWidget } from './POAPWidget'
 
-export default {
-  title: 'POAP Widget',
-  component: POAPWidget,
-  decorators: [Story => <Container><Story/></Container>]
-} as ComponentMeta<typeof POAPWidget>
+// export default {
+//   title: 'POAP Widget',
+//   component: POAPWidget,
+//   decorators: [Story => <Container><Story/></Container>]
+// } as ComponentMeta<typeof POAPWidget>
 
-export const Primary = () => <POAPWidget ensAddress='0xb492873D940dAc02B5021dFF82282d8374509582' />
+// export const Primary = () => <POAPWidget ensAddress='0xb492873D940dAc02B5021dFF82282d8374509582' />
 
-const Container = styled.div`
-    max-width: 570px;
-    margin: 0 auto;
-`
+// const Container = styled.div`
+//     max-width: 570px;
+//     margin: 0 auto;
+// `
