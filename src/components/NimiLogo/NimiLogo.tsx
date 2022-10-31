@@ -9,7 +9,7 @@ import { NIMI_CARDS_WIDTH } from '../../constants';
 import { NimiThemeType } from '../../types';
 import { NimiTheme } from '../../types/NimiTheme';
 
-function getLogo(themeType) {
+function getLogo(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return NimiLogoDefaultSVG;
@@ -32,7 +32,7 @@ export function NimiLogo({ theme }: NimiLogoProps) {
   return <NimiLogoImage src={getLogo(theme.type)} />;
 }
 
-function getSpecificLogoStyles(themeType) {
+function getSpecificLogoStyles(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return css`
