@@ -6,7 +6,7 @@ import daivinityFlowers from '../../assets/svg/daivinity-flowers.png';
 import stars from '../../assets/svg/stars-left-t2.svg';
 import { NIMI_CARDS_WIDTH } from '../../constants';
 import { NimiImage, NimiThemeType } from '../../types';
-import { NimiTheme } from '../../types/NimiThemeDraft';
+import { NimiTheme } from '../../types/NimiTheme';
 
 type ProfilePhotoProps = {
   ensName: string;
@@ -16,7 +16,7 @@ type ProfilePhotoProps = {
   setProfilePhotoRotated: () => void;
 };
 
-function getBackgroundImage(themeType) {
+function getBackgroundImage(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return null;
@@ -147,7 +147,7 @@ const StyledQrCode = styled(QRCode)`
   box-shadow: 0px 26px 56px -20px rgba(74, 48, 140, 0.25);
 `;
 
-function getBackgroundImageSpecialStylings(themeType, left) {
+function getBackgroundImageSpecialStylings(themeType: string, left: boolean | undefined) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return ``;
