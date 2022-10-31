@@ -7,7 +7,6 @@ describe('Validators Modules', () => {
       'displayName',
       'ensAddress',
       'ensName',
-      'isLanding',
       'links',
       'nimiCard',
       'nimiValidator',

@@ -24,11 +24,6 @@ export const displayName = Yup.string().min(3, 'Minimum 3 characters').max(30, '
 export const ensName = Yup.string().min(3, 'Minimum 3 characters').max(255, 'Maximum 255 characters').required();
 
 /**
- * Is Landing
- */
-export const isLanding = Yup.boolean().optional();
-
-/**
  * The Ethereum address that holds the ENS
  */
 export const ensAddress = evmAddressValidator.required();
@@ -76,7 +71,6 @@ export const links = Yup.array().of(nimiLinkValidator);
 export const nimiValidator = Yup.object().shape({
   displayName,
   ensName,
-  isLanding,
   ensAddress,
   image: Yup.object()
     .test({

@@ -9,11 +9,6 @@ import { NimiWidget } from './NimiWidget';
 export interface Nimi {
   displayName: string;
   /**
-   * Checks if its Landing page
-   * @todo This should be removed in the future
-   */
-  isLanding?: boolean;
-  /**
    * Additional information about the Nimi Image
    * @since 0.6.0
    */
