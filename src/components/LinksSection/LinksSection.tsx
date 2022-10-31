@@ -15,7 +15,7 @@ export function LinksSection({ links }: LinksSectionProps) {
   const { getNimiLinkLabel, generateLink } = useLink();
   const { open } = useToast();
 
-  const handleLinkClick = (link) => {
+  const handleLinkClick = (link: NimiLinkBaseDetails) => {
     if (link.type === NimiLinkType.DISCORD || link.type === NimiLinkType.EMAIL) {
       navigator.clipboard.writeText(generateLink(link));
       open(`${link.type.charAt(0).toUpperCase() + link.type.slice(1).toLowerCase()} copied to the clipboard!`);

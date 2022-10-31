@@ -19,7 +19,7 @@ export function NimiLink({ children, onClick, lightButton }: NimiLinkProps) {
   );
 }
 
-function getLinkColors(themeType, lightButton) {
+function getLinkColors(themeType: string, lightButton: boolean | undefined) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return css`
@@ -59,7 +59,7 @@ function getLinkColors(themeType, lightButton) {
   }
 }
 
-function getSVGPathColor(themeType) {
+function getSVGPathColor(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return '#8E85E0';
