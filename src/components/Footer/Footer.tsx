@@ -82,7 +82,7 @@ export const NimiText = styled(NimiTextSVG)`
   font-family: 'Archivo', sans-serif !important;
 `;
 
-function getFooterImageSpecialStylings(themeType) {
+function getFooterImageSpecialStylings(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return '';
