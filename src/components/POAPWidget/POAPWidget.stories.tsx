@@ -13,7 +13,12 @@ export default {
 const Template: ComponentStory<typeof POAPWidget> = (args) => <POAPWidget {...args} />
 
 export const Primary = Template.bind({})
-Primary.args = { ensAddress: '0xb492873D940dAc02B5021dFF82282d8374509582' }
+Primary.args = {
+  ensAddress: '0xb492873D940dAc02B5021dFF82282d8374509582',
+  widget: {
+    tokenIds: ['5742834', '5740068', '5742199', '5733154', '5743494', '5769722']
+  }
+}
 
 const Container = styled.div`
     max-width: 570px;
