@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { POAPWidget } from './POAPWidget'
 
 export default {
-  title: 'POAP Widget',
+  title: 'POAPWidget',
   component: POAPWidget,
   decorators: [Story => <Container><Story/></Container>]
 } as ComponentMeta<typeof POAPWidget>
