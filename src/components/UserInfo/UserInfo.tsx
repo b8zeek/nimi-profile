@@ -70,7 +70,7 @@ const ENSDataContainer = styled.div`
   text-align: center;
 `;
 
-function getElementColors(themeType) {
+function getElementColors(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return css`
@@ -125,7 +125,7 @@ const ENSAddressAndName = styled.p`
   } */
 `;
 
-function getFillColor(themeType) {
+function getFillColor(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return '#343EDF';
