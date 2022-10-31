@@ -10,17 +10,12 @@ module.exports = {
   ],
   "framework": "@storybook/react",
   webpackFinal: async config => {
-    config.module.rules = config.module.rules.map(rule => String(rule.test) === String(/\.(svg|ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/) ?
-      ({
-        ...rule,
-        test: /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/
-      }) :
-      rule
-    )
+    const fileLoaderRule = config.module.rules.find(rule => rule.test.test('.svg'))
+    fileLoaderRule.exclude = /\.svg$/
 
     config.module.rules.push({
       test: /\.svg$/,
-      use: [{loader: 'svg-inline-loader'}],
+      use: ["@svgr/webpack", "url-loader"],
     })
 
     config.module.rules.push({
