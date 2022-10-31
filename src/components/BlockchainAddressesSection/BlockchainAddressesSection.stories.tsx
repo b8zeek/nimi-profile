@@ -16,8 +16,7 @@ const Template: ComponentStory<typeof BlockchainAddressesSection> = (args) => <B
 export const Primary = Template.bind({})
 Primary.args = {
     addresses: [
-        { address: "0x26358E62C2eDEd350e311bfde51588b8383A9315", blockchain: NimiBlockchain.ETHEREUM },
-        { address: "0x26358E62C2eDEd350e311bfde51588b8383A9315", blockchain: NimiBlockchain.ETHEREUM },
+        { address: "0xb492873D940dAc02B5021dFF82282d8374509582", blockchain: NimiBlockchain.ETHEREUM },
         { address: "0x26358E62C2eDEd350e311bfde51588b8383A9315", blockchain: NimiBlockchain.ETHEREUM }
     ]
 }
