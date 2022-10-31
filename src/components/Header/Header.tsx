@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 import { NIMI_CARDS_WIDTH } from '../../constants';
-import { NimiThemeType } from '../../types/NimiThemeDraft';
+import { NimiThemeType } from '../../types/NimiTheme';
 
 type HeaderProps = {
   themeType: NimiThemeType;

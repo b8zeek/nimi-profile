@@ -9,11 +9,10 @@ export default {
   decorators: [Story => <Container><Story/></Container>]
 } as ComponentMeta<typeof UserInfo>
 
-
 const Template: ComponentStory<typeof UserInfo> = (args) => <UserInfo {...args} />
 
 export const Primary = Template.bind({})
-Primary.args = {  
+Primary.args = {
   displayName: '🍀 Bejzik 🍀',
   description: 'Experience technologist focused on crafting future-proof web applications.',
   ensAddress: '0xb492873D940dAc02B5021dFF82282d8374509582',
