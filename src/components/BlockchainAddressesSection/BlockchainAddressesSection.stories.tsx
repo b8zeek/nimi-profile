@@ -10,7 +10,6 @@ export default {
   decorators: [Story => <Container><Story/></Container>]
 } as ComponentMeta<typeof BlockchainAddressesSection>
 
-
 const Template: ComponentStory<typeof BlockchainAddressesSection> = (args) => <BlockchainAddressesSection {...args} />
 
 export const Primary = Template.bind({})

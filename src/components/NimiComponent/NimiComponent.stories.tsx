@@ -32,21 +32,18 @@ const nimi: Nimi = {
     ],
     ensName: "nimi.eth",
     links: [
-      { type: NimiLinkType.DISCORD, title: "", content: "violet#6640" },
-      { type: NimiLinkType.EMAIL, title: "Email", content: "smilenostress@gmail.com" },
-      { type: NimiLinkType.URL, title: "My website", content: "https://linkedin.com/in/Mi-lan" },
-      { type: NimiLinkType.TWITTER, title: "Twitter", content: "0xViolet" },
-      { type: NimiLinkType.LINKEDIN, title: "Github", content: "https://linkedin.com/in/Mi-lan" },
-      { type: NimiLinkType.GITHUB, title: "Github", content: "https://github.com/Mi-lan" },
-      { type: NimiLinkType.LENSTER, title: "Lenster", content: "luduvigo.lens" },
-      { type: NimiLinkType.FIGMA, title: "", content: "luduvigo" },
-      { type: NimiLinkType.DRIBBBLE, title: "Personal", content: "dribler" }
+      { type: NimiLinkType.GITHUB, title: "Github", content: "https://github.com/bejzik8" },
+      { type: NimiLinkType.LINKEDIN, title: "LinkedIn", content: "https://www.linkedin.com/in/basic-mirko/" },
+      { type: NimiLinkType.DISCORD, title: "Discord", content: "tmrk24#0963" },
+      { type: NimiLinkType.KEYBASE, title: "Keybase", content: "bejzik8" },
+      { type: NimiLinkType.TWITTER, title: "Twitter", content: "bejzik8" },
+      { type: NimiLinkType.TELEGRAM, title: "Telegram", content: "https://t.me/bejzik8" },
+      { type: NimiLinkType.EMAIL, title: "Gmail", content: "bejzik8@gmail.com" }
     ],
     theme: {
       type: "NIMI"
     }
 }
-  
 
 export default {
   title: 'Nimi',
@@ -65,4 +62,3 @@ const Container = styled.div`
     max-width: 570px;
     margin: 0 auto;
 `
-
