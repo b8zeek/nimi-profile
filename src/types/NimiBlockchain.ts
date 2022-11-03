@@ -8,18 +8,18 @@ export enum NimiBlockchain {
   LITECOIN = 'LITECOIN',
   POLYGON = 'POLYGON',
   DOGECOIN = 'DOGECOIN',
-  SOLANA = 'SOLANA',
+  SOLANA = 'SOLANA'
 }
 
 export interface NimiBlockchainAddress {
-  address: string;
-  blockchain: NimiBlockchain;
+  address: string
+  blockchain: NimiBlockchain
 }
 
 /**
  * Blockchain information
  */
 export interface NimiBlockchainDetails {
-  name: string;
-  explorerAddressUrl: string[];
+  name: string
+  explorerAddressUrl: string[]
 }

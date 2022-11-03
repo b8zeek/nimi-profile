@@ -6,10 +6,16 @@ import { UserInfo } from './UserInfo'
 export default {
   title: 'UserInfo',
   component: UserInfo,
-  decorators: [Story => <Container><Story/></Container>]
+  decorators: [
+    Story => (
+      <Container>
+        <Story />
+      </Container>
+    )
+  ]
 } as ComponentMeta<typeof UserInfo>
 
-const Template: ComponentStory<typeof UserInfo> = (args) => <UserInfo {...args} />
+const Template: ComponentStory<typeof UserInfo> = args => <UserInfo {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
@@ -21,6 +27,6 @@ Primary.args = {
 }
 
 const Container = styled.div`
-    max-width: 570px;
-    margin: 0 auto;
+  max-width: 570px;
+  margin: 0 auto;
 `

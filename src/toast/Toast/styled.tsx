@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const StyledToastIconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 15px;
-`;
+`
 
 export const StyledToastContainer = styled.div`
   max-width: 360px;
@@ -17,7 +17,7 @@ export const StyledToastContainer = styled.div`
   right: 0;
   z-index: 999999;
   margin: auto;
-`;
+`
 
 export const ToastInnerWrapper = styled.div`
   padding: 0 20px;
@@ -32,7 +32,7 @@ export const ToastInnerWrapper = styled.div`
   color: white;
   transform: scale(1) translate3d(0, 100%, 0);
   transition: transform 100s ease;
-`;
+`
 
 export const StyledToast = styled.div<{ isVisible: boolean }>(
   ({ isVisible }) => `
@@ -59,4 +59,4 @@ export const StyledToast = styled.div<{ isVisible: boolean }>(
       : ''
   }
 `
-);
+)

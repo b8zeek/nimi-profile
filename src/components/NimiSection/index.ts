@@ -1,1 +1,1 @@
-export * from './NimiSection';
+export * from './NimiSection'

@@ -1,1 +1,1 @@
-export * from './poapsAPI';
+export * from './poapsAPI'

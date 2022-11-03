@@ -1,1 +1,1 @@
-export * from './NimiLink';
+export * from './NimiLink'

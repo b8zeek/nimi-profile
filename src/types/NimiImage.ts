@@ -1,34 +1,34 @@
 export enum NimiImageType {
   URL = 'URL',
-  ERC721 = 'ERC721',
+  ERC721 = 'ERC721'
 }
 
 export interface NimiImageCommon {
-  url: string;
+  url: string
 }
 
 export interface NimiImageERC721 extends NimiImageCommon {
-  type: NimiImageType.ERC721;
+  type: NimiImageType.ERC721
   /**
    * The NFT contract address
    */
-  contract: string;
+  contract: string
   /**
    * The NFT token id
    */
-  tokenId: number;
+  tokenId: number
   /**
    * The NFT token URI
    */
-  tokenUri: string;
+  tokenUri: string
 }
 
 export interface NimiImageUrl extends NimiImageCommon {
-  type: NimiImageType.URL;
-  url: string;
+  type: NimiImageType.URL
+  url: string
 }
 
 /**
  * Nimi Image
  */
-export type NimiImage = NimiImageERC721 | NimiImageUrl;
+export type NimiImage = NimiImageERC721 | NimiImageUrl

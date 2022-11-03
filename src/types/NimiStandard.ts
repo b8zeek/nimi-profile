@@ -1,42 +1,42 @@
-import { NimiBlockchainAddress } from './NimiBlockchain';
-import { NimiImage } from './NimiImage';
-import { NimiLinkBaseDetails } from './NimiLink';
-import { NimiWidget } from './NimiWidget';
+import { NimiBlockchainAddress } from './NimiBlockchain'
+import { NimiImage } from './NimiImage'
+import { NimiLinkBaseDetails } from './NimiLink'
+import { NimiWidget } from './NimiWidget'
 
 /**
  * Base defintion of a Nimi Card
  */
 export interface Nimi {
-  displayName: string;
+  displayName: string
   /**
    * Additional information about the Nimi Image
    * @since 0.6.0
    */
-  image?: NimiImage;
+  image?: NimiImage
   /**
    * Nimi description
    */
-  description?: string;
+  description?: string
   /**
    * ENS name of the Nimi. nimi.eth.
    */
-  ensName: string;
+  ensName: string
   /**
    * Address that hold ENS
    */
-  ensAddress: string;
+  ensAddress: string
   /**
    * List of Nimi Links
    */
-  links: NimiLinkBaseDetails[];
+  links: NimiLinkBaseDetails[]
   /**
    * Nimi Blockchain addresses
    */
-  addresses: NimiBlockchainAddress[];
+  addresses: NimiBlockchainAddress[]
   /**
    * Supported widgets
    */
-  widgets: NimiWidget[];
+  widgets: NimiWidget[]
 
-  theme?: any;
+  theme?: any
 }

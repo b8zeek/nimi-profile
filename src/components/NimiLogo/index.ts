@@ -1,1 +1,1 @@
-export * from './NimiLogo';
+export * from './NimiLogo'

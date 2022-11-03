@@ -1,1 +1,1 @@
-export * from './LinksSection';
+export * from './LinksSection'

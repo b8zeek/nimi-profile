@@ -1,6 +1,6 @@
-import { isValidUrl } from '../utils';
+import { isValidUrl } from '../utils'
 
-const DISCORD_USERNAME_PATTERN = /\w+#\d{4}/i;
+const DISCORD_USERNAME_PATTERN = /\w+#\d{4}/i
 
 /**
  * Checks if a value is a valid Discord username.
@@ -9,5 +9,5 @@ const DISCORD_USERNAME_PATTERN = /\w+#\d{4}/i;
  * @returns
  */
 export function isDiscordUsername(value: any): boolean {
-  return !isValidUrl(value) && DISCORD_USERNAME_PATTERN.test(value);
+  return !isValidUrl(value) && DISCORD_USERNAME_PATTERN.test(value)
 }

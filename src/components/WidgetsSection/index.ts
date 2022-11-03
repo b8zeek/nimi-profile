@@ -1,1 +1,1 @@
-export * from './WidgetsSection';
+export * from './WidgetsSection'

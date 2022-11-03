@@ -1,3 +1,3 @@
-export { useToast } from './hooks/useToast';
-export * from './provider';
-export * from './Toast';
+export { useToast } from './hooks/useToast'
+export * from './provider'
+export * from './Toast'

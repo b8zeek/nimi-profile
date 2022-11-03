@@ -82,29 +82,29 @@ export enum NimiLinkType {
   /**
    * Figma Profile
    */
-  FIGMA = 'FIGMA',
+  FIGMA = 'FIGMA'
 }
 
 export interface NimiLinkBaseDetails {
   /**
    * Used for handling links in the App
    */
-  id?: string;
+  id?: string
   /**
    * Link Type
    */
-  type: NimiLinkType;
+  type: NimiLinkType
   /**
    * Link label
    * @deprecated use `title` instead
    */
-  label?: string;
+  label?: string
   /**
    * Link title
    */
-  title?: string;
+  title?: string
   /**
    * Link value
    */
-  content: string;
+  content: string
 }

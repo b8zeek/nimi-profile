@@ -3,7 +3,7 @@ export enum NimiThemeType {
   DEVCON = 'DEVCON',
   RAAVE = 'RAAVE',
   INFINITE = 'INFINITE',
-  DAIVINITY = 'DAIVINITY',
+  DAIVINITY = 'DAIVINITY'
 }
 
 // interface NimiThemePage {
@@ -37,7 +37,7 @@ export enum NimiThemeType {
 // }
 
 export interface NimiTheme {
-  type: NimiThemeType;
+  type: NimiThemeType
   // page?: NimiThemePage;
   // header?: NimiThemeHeader;
   // footer?: NimiThemeFooter;

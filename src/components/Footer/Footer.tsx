@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
-import styled from 'styled-components';
+import { useEffect } from 'react'
+import styled from 'styled-components'
 
-import { ReactComponent as NimiTextSVG } from '../../assets/svg/animated-footer.svg';
-import nimiInfiniteFooterImage from '../../assets/svg/infinite-footer-1.png';
-import nimiRaaveFooterImage from '../../assets/svg/nimi-footer-raave.png';
-import { ReactComponent as NimiLogoSVG } from '../../assets/svg/nimi-logo-default.svg';
-import { NIMI_CARDS_WIDTH } from '../../constants';
-import { NimiThemeType } from '../../types';
+import { ReactComponent as NimiTextSVG } from '../../assets/svg/animated-footer.svg'
+import nimiInfiniteFooterImage from '../../assets/svg/infinite-footer-1.png'
+import nimiRaaveFooterImage from '../../assets/svg/nimi-footer-raave.png'
+import { ReactComponent as NimiLogoSVG } from '../../assets/svg/nimi-logo-default.svg'
+import { NIMI_CARDS_WIDTH } from '../../constants'
+import { NimiThemeType } from '../../types'
 
 function getNimiFooterImage(themeType: NimiThemeType) {
   switch (themeType) {
@@ -16,50 +16,50 @@ function getNimiFooterImage(themeType: NimiThemeType) {
           <NimiLogo />
           <NimiText />
         </>
-      );
+      )
     case NimiThemeType.DEVCON:
       return (
-        <FooterImage src="https://ipfs.io/ipfs/QmQhjaifcDCCXgE7VcktQBeW31f4QGdgAsFyKcUxBqXsZR?filename=montanjas.svg" />
-      );
+        <FooterImage src='https://ipfs.io/ipfs/QmQhjaifcDCCXgE7VcktQBeW31f4QGdgAsFyKcUxBqXsZR?filename=montanjas.svg' />
+      )
     case NimiThemeType.RAAVE:
-      return <FooterImage src={nimiRaaveFooterImage} />;
+      return <FooterImage src={nimiRaaveFooterImage} />
     case NimiThemeType.INFINITE:
-      return <FooterImage src={nimiInfiniteFooterImage} />;
+      return <FooterImage src={nimiInfiniteFooterImage} />
     default:
-      return null;
+      return null
   }
 }
 
 type FooterProps = {
-  themeType: NimiThemeType;
-};
+  themeType: NimiThemeType
+}
 
 export function Footer({ themeType }: FooterProps) {
   useEffect(() => {
     // TODO: MIRKO CHECK THIS OUT!
-    const textPath = document.querySelector('#animated-text-path');
+    const textPath = document.querySelector('#animated-text-path')
 
-    let p = 30;
+    let p = 30
 
-    textPathAnimationLoop();
+    textPathAnimationLoop()
     function textPathAnimationLoop() {
-      if (!textPath) return;
-      p += 0.07; // change to tweak the speed
-      if (p > 32.6) p = 0;
-      textPath.setAttribute('startOffset', p + '%');
+      if (!textPath) return
+      p += 0.07 // change to tweak the speed
+      if (p > 32.6) p = 0
+      textPath.setAttribute('startOffset', p + '%')
       setTimeout(() => {
-        window.requestAnimationFrame(textPathAnimationLoop);
-      }, 1000 / 60);
+        window.requestAnimationFrame(textPathAnimationLoop)
+      }, 1000 / 60)
     }
-  }, []);
+  }, [])
 
-  return <Container>{getNimiFooterImage(themeType)}</Container>;
+  return <Container>{getNimiFooterImage(themeType)}</Container>
 }
 
 const Container = styled.footer`
   width: 100%;
   position: relative;
-`;
+`
 
 const NimiLogo = styled(NimiLogoSVG)`
   width: 80px;
@@ -72,7 +72,7 @@ const NimiLogo = styled(NimiLogoSVG)`
   @media (max-width: ${NIMI_CARDS_WIDTH}px) {
     bottom: 12px;
   }
-`;
+`
 
 export const NimiText = styled(NimiTextSVG)`
   width: 100%;
@@ -80,14 +80,14 @@ export const NimiText = styled(NimiTextSVG)`
   display: flex;
   font-weight: 600;
   font-family: 'Archivo', sans-serif !important;
-`;
+`
 
 function getFooterImageSpecialStylings(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
-      return '';
+      return ''
     case NimiThemeType.DEVCON:
-      return '';
+      return ''
     case NimiThemeType.RAAVE:
       return `
         width: 140%;
@@ -101,7 +101,7 @@ function getFooterImageSpecialStylings(themeType: string) {
           margin-bottom: -90px;
           margin-left: -55%;
         }
-      `;
+      `
     case NimiThemeType.INFINITE:
       return `
         width: 120%;
@@ -111,9 +111,9 @@ function getFooterImageSpecialStylings(themeType: string) {
           width: 100%;
           margin-left: 0;
         }
-      `;
+      `
     default:
-      return null;
+      return null
   }
 }
 
@@ -127,4 +127,4 @@ const FooterImage = styled.img`
   }
 
   ${({ theme }) => getFooterImageSpecialStylings(theme.type)}
-`;
+`

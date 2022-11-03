@@ -7,18 +7,23 @@ import { NimiThemeType } from '../../types'
 export default {
   title: 'NimiLogo',
   component: NimiLogo,
-  decorators: [Story => <Container><Story/></Container>]
+  decorators: [
+    Story => (
+      <Container>
+        <Story />
+      </Container>
+    )
+  ]
 } as ComponentMeta<typeof NimiLogo>
 
-
-const Template: ComponentStory<typeof NimiLogo> = (args) => <NimiLogo {...args} />
+const Template: ComponentStory<typeof NimiLogo> = args => <NimiLogo {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-    theme: { type: NimiThemeType.DAIVINITY }
+  theme: { type: NimiThemeType.DAIVINITY }
 }
 
 const Container = styled.div`
-    max-width: 570px;
-    margin: 0 auto;
+  max-width: 570px;
+  margin: 0 auto;
 `

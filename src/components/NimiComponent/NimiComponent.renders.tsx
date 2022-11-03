@@ -1,4 +1,4 @@
-import { FC, SVGProps } from 'react';
+import { FC, SVGProps } from 'react'
 
 /**
  * Renders a SVG element
@@ -6,8 +6,8 @@ import { FC, SVGProps } from 'react';
  * @returns
  */
 export function renderSVG(logo?: FC<SVGProps<SVGSVGElement>>) {
-  if (!logo) return;
-  const Logo = logo;
+  if (!logo) return
+  const Logo = logo
 
-  return <Logo height={22} width={22} />;
+  return <Logo height={22} width={22} />
 }

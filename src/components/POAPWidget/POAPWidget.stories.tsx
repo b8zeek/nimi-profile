@@ -6,11 +6,16 @@ import { POAPWidget } from './POAPWidget'
 export default {
   title: 'POAPWidget',
   component: POAPWidget,
-  decorators: [Story => <Container><Story/></Container>]
+  decorators: [
+    Story => (
+      <Container>
+        <Story />
+      </Container>
+    )
+  ]
 } as ComponentMeta<typeof POAPWidget>
 
-
-const Template: ComponentStory<typeof POAPWidget> = (args) => <POAPWidget {...args} />
+const Template: ComponentStory<typeof POAPWidget> = args => <POAPWidget {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
@@ -21,6 +26,6 @@ Primary.args = {
 }
 
 const Container = styled.div`
-    max-width: 570px;
-    margin: 0 auto;
+  max-width: 570px;
+  margin: 0 auto;
 `

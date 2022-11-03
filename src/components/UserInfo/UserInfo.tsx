@@ -1,21 +1,21 @@
-import { RWebShare } from 'react-web-share';
-import styled, { css } from 'styled-components';
+import { RWebShare } from 'react-web-share'
+import styled, { css } from 'styled-components'
 
-import { ReactComponent as QRSVG } from '../../assets/svg/qr.svg';
-import { ReactComponent as ShareSVG } from '../../assets/svg/share-new.svg';
-import { NimiThemeType } from '../../types/NimiTheme';
-import { shortenAddress } from '../../utils';
+import { ReactComponent as QRSVG } from '../../assets/svg/qr.svg'
+import { ReactComponent as ShareSVG } from '../../assets/svg/share-new.svg'
+import { NimiThemeType } from '../../types/NimiTheme'
+import { shortenAddress } from '../../utils'
 
 type UserInfoProps = {
-  displayName: string;
-  description?: string;
-  ensAddress: string;
-  ensName: string;
-  setProfilePhotoRotated: () => void;
-};
+  displayName: string
+  description?: string
+  ensAddress: string
+  ensName: string
+  setProfilePhotoRotated: () => void
+}
 
 export function UserInfo({ displayName, description, ensAddress, ensName, setProfilePhotoRotated }: UserInfoProps) {
-  const openENSAddressEtherscan = () => window.open(`https://etherscan.io/address/${ensAddress}`, '_blank');
+  const openENSAddressEtherscan = () => window.open(`https://etherscan.io/address/${ensAddress}`, '_blank')
 
   return (
     <Container>
@@ -29,7 +29,7 @@ export function UserInfo({ displayName, description, ensAddress, ensName, setPro
           data={{
             text: 'Check out my Nimi page:',
             url: `https://${ensName}.limo`,
-            title: 'Share Nimi',
+            title: 'Share Nimi'
           }}
         >
           <ENSActionsButton>
@@ -41,12 +41,12 @@ export function UserInfo({ displayName, description, ensAddress, ensName, setPro
         </ENSActionsButton>
       </ENSDataContainer>
     </Container>
-  );
+  )
 }
 
 const Container = styled.div`
   margin-bottom: 32px;
-`;
+`
 
 const DisplayName = styled.h1`
   line-height: 32px;
@@ -54,7 +54,7 @@ const DisplayName = styled.h1`
   font-weight: 600;
   text-align: center;
   margin-bottom: 16px;
-`;
+`
 
 const Description = styled.p`
   width: 80%;
@@ -63,12 +63,12 @@ const Description = styled.p`
   font-weight: 400;
   text-align: center;
   margin: 0 auto 16px;
-`;
+`
 
 const ENSDataContainer = styled.div`
   width: 100%;
   text-align: center;
-`;
+`
 
 function getElementColors(themeType: string) {
   switch (themeType) {
@@ -77,33 +77,33 @@ function getElementColors(themeType: string) {
         border: 1px solid white;
         color: rgba(33, 33, 35, 0.65);
         background-color: #fff;
-      `;
+      `
     case NimiThemeType.DEVCON:
       return css`
         border: 1px solid white;
         color: rgba(33, 33, 35, 0.65);
         background-color: #fff;
-      `;
+      `
     case NimiThemeType.RAAVE:
       return css`
         border: 1px solid #bed784;
         color: #bed784;
         background-color: #000;
-      `;
+      `
     case NimiThemeType.INFINITE:
       return css`
         border: 1px solid #ffffff80;
         color: #fff;
         background-color: #000;
-      `;
+      `
     case NimiThemeType.DAIVINITY:
       return css`
         border: 1px solid #f4b5d4;
         color: #bb6bd9;
         background-color: #fff;
-      `;
+      `
     default:
-      return null;
+      return null
   }
 }
 
@@ -123,22 +123,22 @@ const ENSAddressAndName = styled.p`
   /* & span {
     color: rgba(52, 62, 223, 1);
   } */
-`;
+`
 
 function getFillColor(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
-      return '#343EDF';
+      return '#343EDF'
     case NimiThemeType.DEVCON:
-      return '#343EDF';
+      return '#343EDF'
     case NimiThemeType.RAAVE:
-      return '#BED784';
+      return '#BED784'
     case NimiThemeType.INFINITE:
-      return '#fff';
+      return '#fff'
     case NimiThemeType.DAIVINITY:
-      return '#BB6BD9';
+      return '#BB6BD9'
     default:
-      return null;
+      return null
   }
 }
 
@@ -162,4 +162,4 @@ const ENSActionsButton = styled.button`
   & .svg-path-stroke {
     stroke: ${({ theme }) => getFillColor(theme.type)};
   }
-`;
+`

@@ -1,1 +1,1 @@
-export * from './BlockchainAddressesSection';
+export * from './BlockchainAddressesSection'

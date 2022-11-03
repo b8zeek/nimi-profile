@@ -1,21 +1,21 @@
-import ReactDOMServer from 'react-dom/server';
+import ReactDOMServer from 'react-dom/server'
 
-import { NIMI_BLOCKCHAIN_DETAILS } from '../constants';
-import { Nimi, NimiBlockchain } from '../types';
+import { NIMI_BLOCKCHAIN_DETAILS } from '../constants'
+import { Nimi, NimiBlockchain } from '../types'
 /**
  * Returns true if value is proper url
  * @param urlString
  */
 export function isValidUrl(urlString: string): boolean {
-  let url: URL;
+  let url: URL
 
   try {
-    url = new URL(urlString);
+    url = new URL(urlString)
   } catch (_) {
-    return false;
+    return false
   }
 
-  return url.protocol === 'http:' || url.protocol === 'https:';
+  return url.protocol === 'http:' || url.protocol === 'https:'
 }
 
 /**
@@ -25,7 +25,7 @@ export function isValidUrl(urlString: string): boolean {
  * @returns the explorer url
  */
 export function getExplorerAddressLink(blockchain: NimiBlockchain, address: string): string {
-  return NIMI_BLOCKCHAIN_DETAILS[blockchain].explorerAddressUrl[0] + address;
+  return NIMI_BLOCKCHAIN_DETAILS[blockchain].explorerAddressUrl[0] + address
 }
 
 /**
@@ -37,8 +37,8 @@ export function getExplorerAddressLink(blockchain: NimiBlockchain, address: stri
  * @throws If the address is not checksummed
  */
 export function shortenAddress(address?: string, charsBefore = 4, charsAfter = 4): string {
-  if (!address) return '';
-  return `${address.substring(0, charsBefore + 2)}...${address.substring(42 - charsAfter)}`;
+  if (!address) return ''
+  return `${address.substring(0, charsBefore + 2)}...${address.substring(42 - charsAfter)}`
 }
 
 /**
@@ -47,9 +47,9 @@ export function shortenAddress(address?: string, charsBefore = 4, charsAfter = 4
  * @returns Filtered nimi object
  */
 export function filterEmptyFields(nimi: Nimi): Nimi {
-  if (nimi.links) nimi.links = nimi.links.filter(({ content }) => content !== '');
-  if (nimi.addresses) nimi.addresses = nimi.addresses.filter(({ address }) => address !== '');
-  return nimi;
+  if (nimi.links) nimi.links = nimi.links.filter(({ content }) => content !== '')
+  if (nimi.addresses) nimi.addresses = nimi.addresses.filter(({ address }) => address !== '')
+  return nimi
 }
 
 // I think we don't need this.
@@ -59,5 +59,5 @@ export function filterEmptyFields(nimi: Nimi): Nimi {
  * @returns react element's innerHTML
  */
 export function encodeSVGToDataURI(reactElement) {
-  return 'data:image/svg+xml,' + escape(ReactDOMServer.renderToStaticMarkup(reactElement));
+  return 'data:image/svg+xml,' + escape(ReactDOMServer.renderToStaticMarkup(reactElement))
 }

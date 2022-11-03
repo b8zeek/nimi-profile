@@ -1,1 +1,1 @@
-export * from './NimiComponent';
+export * from './NimiComponent'

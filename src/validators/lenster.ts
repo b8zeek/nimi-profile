@@ -2,5 +2,5 @@
  *
  */
 export function isLensterUsername(value: any): boolean {
-  return typeof value == 'string' && value.endsWith('.lens');
+  return typeof value == 'string' && value.endsWith('.lens')
 }

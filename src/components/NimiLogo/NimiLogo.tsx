@@ -1,35 +1,35 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
-import NimiLogoDaivinitySVG from '../../assets/svg/nimi-logo-daivinity.svg';
-import NimiLogoDefaultSVG from '../../assets/svg/nimi-logo-default.svg';
-import NimiLogoDevconSVG from '../../assets/svg/nimi-logo-devcon.svg';
-import NimiLogoInfiniteSVG from '../../assets/svg/nimi-logo-infinite.svg';
-import NimiLogoRaaveSVG from '../../assets/svg/nimi-logo-raave.svg';
-import { NIMI_CARDS_WIDTH } from '../../constants';
-import { NimiThemeType } from '../../types';
-import { NimiTheme } from '../../types/NimiTheme';
+import NimiLogoDaivinitySVG from '../../assets/svg/nimi-logo-daivinity.svg'
+import NimiLogoDefaultSVG from '../../assets/svg/nimi-logo-default.svg'
+import NimiLogoDevconSVG from '../../assets/svg/nimi-logo-devcon.svg'
+import NimiLogoInfiniteSVG from '../../assets/svg/nimi-logo-infinite.svg'
+import NimiLogoRaaveSVG from '../../assets/svg/nimi-logo-raave.svg'
+import { NIMI_CARDS_WIDTH } from '../../constants'
+import { NimiThemeType } from '../../types'
+import { NimiTheme } from '../../types/NimiTheme'
 
 function getLogo(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
-      return NimiLogoDefaultSVG;
+      return NimiLogoDefaultSVG
     case NimiThemeType.DEVCON:
-      return NimiLogoDevconSVG;
+      return NimiLogoDevconSVG
     case NimiThemeType.RAAVE:
-      return NimiLogoRaaveSVG;
+      return NimiLogoRaaveSVG
     case NimiThemeType.INFINITE:
-      return NimiLogoInfiniteSVG;
+      return NimiLogoInfiniteSVG
     case NimiThemeType.DAIVINITY:
-      return NimiLogoDaivinitySVG;
+      return NimiLogoDaivinitySVG
   }
 }
 
 type NimiLogoProps = {
-  theme: NimiTheme;
-};
+  theme: NimiTheme
+}
 
 export function NimiLogo({ theme }: NimiLogoProps) {
-  return <NimiLogoImage src={getLogo(theme.type)} />;
+  return <NimiLogoImage src={getLogo(theme.type)} />
 }
 
 function getSpecificLogoStyles(themeType: string) {
@@ -42,7 +42,7 @@ function getSpecificLogoStyles(themeType: string) {
         @media (max-width: ${NIMI_CARDS_WIDTH}px) {
           width: 88px;
         }
-      `;
+      `
     case NimiThemeType.DEVCON:
       return css`
         margin: 32px auto 18px;
@@ -51,7 +51,7 @@ function getSpecificLogoStyles(themeType: string) {
           width: 260px;
           margin: 25px auto 10px;
         }
-      `;
+      `
     case NimiThemeType.RAAVE:
       return css`
         width: 300px;
@@ -61,7 +61,7 @@ function getSpecificLogoStyles(themeType: string) {
           width: 100%;
           margin: 16px auto 20px;
         }
-      `;
+      `
     case NimiThemeType.INFINITE:
       return css`
         width: 300px;
@@ -71,7 +71,7 @@ function getSpecificLogoStyles(themeType: string) {
           width: 95%;
           margin: 32px auto 20px;
         }
-      `;
+      `
     case NimiThemeType.DAIVINITY:
       return css`
         width: 300px;
@@ -81,9 +81,9 @@ function getSpecificLogoStyles(themeType: string) {
           width: 80%;
           margin: 32px auto 20px;
         }
-      `;
+      `
     default:
-      return null;
+      return null
   }
 }
 
@@ -95,4 +95,4 @@ const NimiLogoImage = styled.img`
   margin: 0 auto;
 
   ${({ theme }) => getSpecificLogoStyles(theme.type)}
-`;
+`

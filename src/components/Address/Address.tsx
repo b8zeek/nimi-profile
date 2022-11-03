@@ -1,13 +1,13 @@
-import { ReactNode } from 'react';
-import styled from 'styled-components';
+import { ReactNode } from 'react'
+import styled from 'styled-components'
 
 type AddressProps = {
-  children: ReactNode;
-  onClick: () => void;
-};
+  children: ReactNode
+  onClick: () => void
+}
 
 export function Address({ children, onClick }: AddressProps) {
-  return <Button onClick={onClick}>{children}</Button>;
+  return <Button onClick={onClick}>{children}</Button>
 }
 
 export const Button = styled.div`
@@ -21,4 +21,4 @@ export const Button = styled.div`
   padding: 6px;
   box-shadow: 0px 5px 18px rgba(156, 149, 233, 0.2);
   cursor: pointer;
-`;
+`

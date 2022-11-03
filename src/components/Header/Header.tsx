@@ -1,14 +1,14 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 
-import { NIMI_CARDS_WIDTH } from '../../constants';
-import { NimiThemeType } from '../../types/NimiTheme';
+import { NIMI_CARDS_WIDTH } from '../../constants'
+import { NimiThemeType } from '../../types/NimiTheme'
 
 type HeaderProps = {
-  themeType: NimiThemeType;
-};
+  themeType: NimiThemeType
+}
 
 export function Header({ themeType }: HeaderProps) {
-  return <Container>{themeType === NimiThemeType.NIMI && <NimiCircle />}</Container>;
+  return <Container>{themeType === NimiThemeType.NIMI && <NimiCircle />}</Container>
 }
 
 function getHeaderBackground(themeType: NimiThemeType) {
@@ -17,9 +17,9 @@ function getHeaderBackground(themeType: NimiThemeType) {
       return css`
         background: url(https://cdn.discordapp.com/attachments/1018317760968806411/1026246674793910372/clouds_1.png);
         background-repeat: repeat-x;
-      `;
+      `
     default:
-      return '';
+      return ''
   }
 }
 
@@ -32,7 +32,7 @@ const Container = styled.header`
   display: flex;
   justify-content: center;
   ${({ theme }) => getHeaderBackground(theme.type)}
-`;
+`
 
 const NimiCircle = styled.div`
   width: calc(100vw * 1.3);
@@ -49,4 +49,4 @@ const NimiCircle = styled.div`
     height: 100vw;
     top: calc(-100vw + 185px);
   }
-`;
+`

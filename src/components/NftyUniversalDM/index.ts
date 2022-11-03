@@ -1,1 +1,1 @@
-export * from './NftyUniversalDM';
+export * from './NftyUniversalDM'

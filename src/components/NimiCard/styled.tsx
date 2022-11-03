@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Section = styled.section<{ padding?: string }>`
   display: flex;
@@ -9,10 +9,10 @@ export const Section = styled.section<{ padding?: string }>`
   border-radius: 25px;
   width: 100%;
   margin-bottom: 40px;
-`;
+`
 
 export const StyledNftyUniversalDMWrapper = styled.div`
   display: flex;
   justify-content: center;
   padding-top: 20px;
-`;
+`

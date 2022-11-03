@@ -7,17 +7,23 @@ import { Footer } from './Footer'
 export default {
   title: 'Footer',
   component: Footer,
-  decorators: [Story => <Container><Story/></Container>]
+  decorators: [
+    Story => (
+      <Container>
+        <Story />
+      </Container>
+    )
+  ]
 } as ComponentMeta<typeof Footer>
 
-const Template: ComponentStory<typeof Footer> = (args) => <Footer {...args} />
+const Template: ComponentStory<typeof Footer> = args => <Footer {...args} />
 
 export const Primary = Template.bind({})
 Primary.args = {
-    themeType: NimiThemeType.NIMI
+  themeType: NimiThemeType.NIMI
 }
 
 const Container = styled.div`
-    max-width: 570px;
-    margin: 0 auto;
+  max-width: 570px;
+  margin: 0 auto;
 `

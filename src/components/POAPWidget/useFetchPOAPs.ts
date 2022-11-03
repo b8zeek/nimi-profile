@@ -1,40 +1,40 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
 
-import { fetchPOAPsWithENS, fetchPOAPsWithTokens } from '../../api';
-import { NimiPOAPWidgetContext, POAPToken } from '../../types';
+import { fetchPOAPsWithENS, fetchPOAPsWithTokens } from '../../api'
+import { NimiPOAPWidgetContext, POAPToken } from '../../types'
 
 export function useFetchPOAPs(ensAddress: string, widget?: NimiPOAPWidgetContext) {
-  const [loading, setLoading] = useState(true);
-  const [data, setData] = useState<POAPToken[]>([]);
-  const [error, setError] = useState(false);
+  const [loading, setLoading] = useState(true)
+  const [data, setData] = useState<POAPToken[]>([])
+  const [error, setError] = useState(false)
 
   useEffect(() => {
     async function startFetching() {
-      setLoading(true);
+      setLoading(true)
 
       try {
         if (widget?.tokenIds?.length) {
-          const tokensData = await fetchPOAPsWithTokens(widget.tokenIds);
+          const tokensData = await fetchPOAPsWithTokens(widget.tokenIds)
 
-          setData(tokensData);
+          setData(tokensData)
         } else {
-          const { data: tokensData } = await fetchPOAPsWithENS(ensAddress);
+          const { data: tokensData } = await fetchPOAPsWithENS(ensAddress)
 
-          setData(tokensData.slice(0, 6));
+          setData(tokensData.slice(0, 6))
         }
       } catch (error) {
-        setError(true);
+        setError(true)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
     }
 
-    startFetching();
-  }, [ensAddress, widget]);
+    startFetching()
+  }, [ensAddress, widget])
 
   return {
     loading,
     data,
-    error,
-  };
+    error
+  }
 }

@@ -1,1 +1,1 @@
-export * from './POAPWidget';
+export * from './POAPWidget'
