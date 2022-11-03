@@ -19,6 +19,31 @@ export function NimiLink({ children, onClick, lightButton }: NimiLinkProps) {
   );
 }
 
+export const LinkButton = styled(motion.a)<{ lightButton?: boolean }>`
+  width: fit-content;
+  height: 42px;
+  padding: 11px 16px;
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  box-sizing: border-box;
+  line-height: 20px;
+  font-size: 15px;
+  border-radius: 1000px;
+  box-shadow: 0px 5px 18px rgba(156, 149, 233, 0.2);
+  ${({ theme, lightButton }) => getLinkColors(theme.type, lightButton)}
+  cursor: pointer;
+
+  @media (max-width: ${NIMI_CARDS_WIDTH}px) {
+    font-size: 14px;
+    gap: none;
+  }
+
+  & .svg-path-stroke {
+    stroke: ${({ theme }) => getSVGPathColor(theme.type)};
+  }
+`;
+
 function getLinkColors(themeType: string, lightButton: boolean | undefined) {
   switch (themeType) {
     case NimiThemeType.NIMI:
@@ -75,26 +100,3 @@ function getSVGPathColor(themeType: string) {
       return null;
   }
 }
-
-export const LinkButton = styled(motion.a)<{ lightButton?: boolean }>`
-  width: fit-content;
-  height: 42px;
-  display: flex;
-  gap: 9px;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 12px 16px;
-  border-radius: 20px;
-  box-shadow: 0px 5px 18px rgba(156, 149, 233, 0.2);
-  ${({ theme, lightButton }) => getLinkColors(theme.type, lightButton)}
-  cursor: pointer;
-
-  @media (max-width: ${NIMI_CARDS_WIDTH}px) {
-    font-size: 14px;
-    gap: none;
-  }
-
-  & .svg-path-stroke {
-    stroke: ${({ theme }) => getSVGPathColor(theme.type)};
-  }
-`;
