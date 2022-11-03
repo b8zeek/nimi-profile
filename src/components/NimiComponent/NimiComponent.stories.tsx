@@ -14,7 +14,7 @@ const nimi: Nimi = {
     displayName: "NimiComponent",
     image: {
       type: NimiImageType.URL,
-      url: "https://davi.mypinata.cloud/ipfs/QmTVmDTUNnMChujFptE4gQvo2QH2yBpj4YX2wzVT1mdZEv"
+      url: "https://ipfs.io/ipfs/bafkreigkp5o6b5pwgxfbcyt2iz7afvhmupacqxv2y2af7ufw52yvtni7bi"
     },
     addresses: [
       { address: "0xb492873D940dAc02B5021dFF82282d8374509582", blockchain: NimiBlockchain.ETHEREUM },
@@ -26,7 +26,7 @@ const nimi: Nimi = {
       {
         type: NimiWidgetType.POAP,
         context: {
-          tokenIds: ["5388110", "5364618", "5389976", "4997079", "4941037", "4770382"]
+          tokenIds: ['5742834', '5740068', '5742199', '5733154', '5743494', '5769722']
         }
       }
     ],
@@ -41,7 +41,7 @@ const nimi: Nimi = {
       { type: NimiLinkType.EMAIL, title: "Gmail", content: "bejzik8@gmail.com" }
     ],
     theme: {
-      type: "NIMI"
+      type: "DAIVINITY"
     }
 }
 
@@ -59,6 +59,11 @@ Primary.args = {
 }
 
 const Container = styled.div`
-    max-width: 570px;
-    margin: 0 auto;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  overflow: hidden;
 `
