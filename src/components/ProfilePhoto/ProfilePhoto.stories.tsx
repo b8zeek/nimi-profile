@@ -25,9 +25,9 @@ Primary.args = {
     type: NimiImageType.URL,
     url: 'https://ipfs.io/ipfs/bafkreigkp5o6b5pwgxfbcyt2iz7afvhmupacqxv2y2af7ufw52yvtni7bi'
   },
-  theme: { type: NimiThemeType.DAIVINITY },
-  profilePhotoRotated: true,
-  setProfilePhotoRotated: () => console.log('Rotate profile photo click.')
+  profilePhotoRotated: false,
+  setProfilePhotoRotated: () => console.log('Rotate profile photo click.'),
+  themeType: NimiThemeType.RAAVE
 }
 
 const Container = styled.div`
