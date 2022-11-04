@@ -12,9 +12,10 @@ type UserInfoProps = {
   ensAddress: string
   ensName: string
   setProfilePhotoRotated: () => void
+  themeType: NimiThemeType
 }
 
-export function UserInfo({ displayName, description, ensAddress, ensName, setProfilePhotoRotated }: UserInfoProps) {
+export function UserInfo({ displayName, description, ensAddress, ensName, setProfilePhotoRotated, themeType }: UserInfoProps) {
   const openENSAddressEtherscan = () => window.open(`https://etherscan.io/address/${ensAddress}`, '_blank')
 
   return (
@@ -22,7 +23,7 @@ export function UserInfo({ displayName, description, ensAddress, ensName, setPro
       <DisplayName>{displayName}</DisplayName>
       {description && <Description>{description}</Description>}
       <ENSDataContainer>
-        <ENSAddressAndName>
+        <ENSAddressAndName themeType={themeType}>
           <span onClick={openENSAddressEtherscan}>{shortenAddress(ensAddress, 2, 4)}</span> - {ensName}
         </ENSAddressAndName>
         <RWebShare
@@ -32,11 +33,11 @@ export function UserInfo({ displayName, description, ensAddress, ensName, setPro
             title: 'Share Nimi'
           }}
         >
-          <ENSActionsButton>
+          <ENSActionsButton themeType={themeType}>
             <ShareSVG />
           </ENSActionsButton>
         </RWebShare>
-        <ENSActionsButton onClick={setProfilePhotoRotated}>
+        <ENSActionsButton themeType={themeType} onClick={setProfilePhotoRotated}>
           <QRSVG />
         </ENSActionsButton>
       </ENSDataContainer>
@@ -70,6 +71,44 @@ const Description = styled.p`
 const ENSDataContainer = styled.div`
   width: 100%;
   text-align: center;
+`
+
+const ENSAddressAndName = styled.p<{ themeType: NimiThemeType }>`
+  display: inline-block;
+  line-height: 24px;
+  font-size: 14px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 500;
+  border-radius: 100px;
+  ${({ themeType }) => getElementColors(themeType)}
+  padding: 0 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+  box-shadow: 0px 3px 10px rgba(33, 33, 35, 0.06);
+  margin: 0;
+`
+
+const ENSActionsButton = styled.button<{ themeType: NimiThemeType }>`
+  height: 24px;
+  width: 24px;
+  display: inline-flex;
+  vertical-align: top;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 100px;
+  ${({ themeType }) => getElementColors(themeType)}
+  box-shadow: 0px 3px 10px rgba(33, 33, 35, 0.06);
+  cursor: pointer;
+  margin-left: 6px;
+
+  & .svg-path-fill {
+    fill: ${({ themeType }) => getFillColor(themeType)};
+  }
+
+  & .svg-path-stroke {
+    stroke: ${({ themeType }) => getFillColor(themeType)};
+  }
 `
 
 function getElementColors(themeType: string) {
@@ -109,21 +148,6 @@ function getElementColors(themeType: string) {
   }
 }
 
-const ENSAddressAndName = styled.p`
-  display: inline-block;
-  line-height: 24px;
-  font-size: 14px;
-  font-family: 'Archivo', sans-serif;
-  font-weight: 500;
-  border-radius: 100px;
-  ${({ theme }) => getElementColors(theme.type)}
-  padding: 0 10px;
-  box-sizing: border-box;
-  cursor: pointer;
-  box-shadow: 0px 3px 10px rgba(33, 33, 35, 0.06);
-  margin: 0;
-`
-
 function getFillColor(themeType: string) {
   switch (themeType) {
     case NimiThemeType.NIMI:
@@ -141,24 +165,3 @@ function getFillColor(themeType: string) {
   }
 }
 
-const ENSActionsButton = styled.button`
-  height: 24px;
-  width: 24px;
-  display: inline-flex;
-  vertical-align: top;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  border-radius: 100px;
-  ${({ theme }) => getElementColors(theme.type)}
-  box-shadow: 0px 3px 10px rgba(33, 33, 35, 0.06);
-  cursor: pointer;
-  margin-left: 6px;
-
-  & .svg-path-fill {
-    fill: ${({ theme }) => getFillColor(theme.type)};
-  }
-  & .svg-path-stroke {
-    stroke: ${({ theme }) => getFillColor(theme.type)};
-  }
-`
