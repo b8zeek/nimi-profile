@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import styled from 'styled-components'
+import { NimiThemeType } from '../../types'
 
 import { NimiLink } from './NimiLink'
 
@@ -20,7 +21,8 @@ const Template: ComponentStory<typeof NimiLink> = args => <NimiLink {...args} />
 export const Primary = Template.bind({})
 Primary.args = {
   children: 'Bejzik',
-  onClick: () => console.log('Link click action.')
+  onClick: () => console.log('Link click action.'),
+  themeType: NimiThemeType.RAAVE
 }
 
 const Container = styled.div`

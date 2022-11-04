@@ -9,17 +9,29 @@ type NimiLinkProps = {
   children: ReactNode
   onClick: () => void
   lightButton?: boolean
+  themeType: NimiThemeType
 }
 
-export function NimiLink({ children, onClick, lightButton }: NimiLinkProps) {
+export function NimiLink({ children, onClick, lightButton, themeType }: NimiLinkProps) {
   return (
-    <LinkButton onClick={onClick} lightButton={lightButton} whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+    <LinkButton
+      onClick={onClick}
+      lightButton={lightButton}
+      whileHover={{ scale: 1.03 }}
+      whileTap={{ scale: 0.97 }}
+      themeType={themeType}
+    >
       {children}
     </LinkButton>
   )
 }
 
-export const LinkButton = styled(motion.a)<{ lightButton?: boolean }>`
+type LinkButtonProps = {
+  lightButton?: boolean
+  themeType: NimiThemeType
+}
+
+export const LinkButton = styled(motion.a)<LinkButtonProps>`
   width: fit-content;
   height: 42px;
   padding: 11px 16px;
@@ -32,7 +44,7 @@ export const LinkButton = styled(motion.a)<{ lightButton?: boolean }>`
   font-family: 'Archivo', sans-serif;
   border-radius: 1000px;
   box-shadow: 0px 5px 18px rgba(156, 149, 233, 0.2);
-  ${({ theme, lightButton }) => getLinkColors(theme.type, lightButton)}
+  ${({ themeType, lightButton }) => getLinkColors(themeType, lightButton)}
   cursor: pointer;
 
   @media (max-width: ${NIMI_CARDS_WIDTH}px) {
@@ -41,11 +53,11 @@ export const LinkButton = styled(motion.a)<{ lightButton?: boolean }>`
   }
 
   & .svg-path-stroke {
-    stroke: ${({ theme }) => getSVGPathColor(theme.type)};
+    stroke: ${({ themeType }) => getSVGPathColor(themeType)};
   }
 `
 
-function getLinkColors(themeType: string, lightButton: boolean | undefined) {
+function getLinkColors(themeType: NimiThemeType, lightButton: boolean | undefined) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return css`
@@ -85,7 +97,7 @@ function getLinkColors(themeType: string, lightButton: boolean | undefined) {
   }
 }
 
-function getSVGPathColor(themeType: string) {
+function getSVGPathColor(themeType: NimiThemeType) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return '#8E85E0'
