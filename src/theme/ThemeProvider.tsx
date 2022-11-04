@@ -20,10 +20,6 @@ const GlobalStyles = createGlobalStyle<{ theme: NimiTheme }>`
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
-  html, body, input, label, textarea, button,  h1, h2, h3, h4, h5, h6, p, a {
-    font-family: 'Archivo', sans-serif;
-  }
-
   body {
     min-height: 100vh;
     position: relative;
