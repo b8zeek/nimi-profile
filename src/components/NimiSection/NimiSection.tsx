@@ -6,11 +6,29 @@ import { NimiThemeType } from '../../types/NimiTheme'
 type NimiSectionProps = {
   children: ReactNode
   marginBottom?: string
+  themeType: NimiThemeType
 }
 
-export function NimiSection({ children, marginBottom }: NimiSectionProps) {
-  return <Container marginBottom={marginBottom}>{children}</Container>
+export function NimiSection({ children, marginBottom, themeType }: NimiSectionProps) {
+  return <Container marginBottom={marginBottom} themeType={themeType}>{children}</Container>
 }
+
+type ContainerProps = {
+  marginBottom?: string
+  themeType: NimiThemeType
+}
+
+const Container = styled.section<ContainerProps>`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 22px;
+  border-radius: 1000px;
+  ${({ themeType }) => getSectionColors(themeType)}
+  box-shadow: 0px 16px 16px -12px rgba(47, 54, 71, 0.16);
+  margin-bottom: ${({ marginBottom = '0' }) => marginBottom};
+`
 
 function getSectionColors(themeType: string) {
   switch (themeType) {
@@ -41,14 +59,3 @@ function getSectionColors(themeType: string) {
   }
 }
 
-const Container = styled.section<{ marginBottom?: string }>`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  padding: 22px;
-  border-radius: 1000px;
-  ${({ theme }) => getSectionColors(theme.type)}
-  box-shadow: 0px 16px 16px -12px rgba(47, 54, 71, 0.16);
-  margin-bottom: ${({ marginBottom = '0' }) => marginBottom};
-`
