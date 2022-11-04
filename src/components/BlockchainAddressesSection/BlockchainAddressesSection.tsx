@@ -5,13 +5,14 @@ import { useToast } from '../../toast'
 import { Address } from '../Address'
 import { renderSVG } from '../NimiComponent/NimiComponent.renders'
 import { NimiSection } from '../NimiSection'
-import { NimiBlockchainAddress } from '../../types'
+import { NimiBlockchainAddress, NimiThemeType } from '../../types'
 
 type BlockchainAddressesSectionProps = {
   addresses: NimiBlockchainAddress[]
+  themeType: NimiThemeType
 }
 
-export function BlockchainAddressesSection({ addresses }: BlockchainAddressesSectionProps) {
+export function BlockchainAddressesSection({ addresses, themeType }: BlockchainAddressesSectionProps) {
   const { open } = useToast()
 
   const copyBlockchainAddress = (address: string, feedback: string) => {
@@ -20,7 +21,7 @@ export function BlockchainAddressesSection({ addresses }: BlockchainAddressesSec
   }
 
   return (
-    <NimiSection marginBottom='25px'>
+    <NimiSection marginBottom='25px' themeType={themeType}>
       <SectionItemContainer>
         {addresses.map(({ address, blockchain }) => (
           <Address
