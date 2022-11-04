@@ -68,9 +68,44 @@ export default {
 
 const Template: ComponentStory<typeof NimiComponent> = args => <NimiComponent {...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
-  nimi
+export const Default = Template.bind({})
+Default.args = {
+  nimi: {
+    ...nimi,
+    theme: { type: NimiThemeType.NIMI }
+  }
+}
+
+export const Devcon = Template.bind({})
+Devcon.args = {
+  nimi: {
+    ...nimi,
+    theme: { type: NimiThemeType.DEVCON }
+  }
+}
+
+export const Raave = Template.bind({})
+Raave.args = {
+  nimi: {
+    ...nimi,
+    theme: { type: NimiThemeType.RAAVE }
+  }
+}
+
+export const Daivinity = Template.bind({})
+Daivinity.args = {
+  nimi: {
+    ...nimi,
+    theme: { type: NimiThemeType.DAIVINITY }
+  }
+}
+
+export const Infinite = Template.bind({})
+Infinite.args = {
+  nimi: {
+    ...nimi,
+    theme: { type: NimiThemeType.INFINITE }
+  }
 }
 
 const Container = styled.div`
