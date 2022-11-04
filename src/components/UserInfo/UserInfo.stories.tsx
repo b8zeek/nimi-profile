@@ -25,7 +25,7 @@ Primary.args = {
   ensAddress: '0xb492873D940dAc02B5021dFF82282d8374509582',
   ensName: 'bejzik.eth',
   setProfilePhotoRotated: () => console.log('Rotate profile photo click.'),
-  themeType: NimiThemeType.DAIVINITY
+  themeType: NimiThemeType.RAAVE
 }
 
 const Container = styled.div`
