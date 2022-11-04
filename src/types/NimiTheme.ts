@@ -45,5 +45,3 @@ export interface NimiTheme {
   // link?: NimiThemeLink;
   // widget?: NimiThemeWidget;
 }
-
-// Should we assign default values to avoid conditions?

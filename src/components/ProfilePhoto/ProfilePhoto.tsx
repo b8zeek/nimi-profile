@@ -11,64 +11,30 @@ import { NimiTheme } from '../../types/NimiTheme'
 type ProfilePhotoProps = {
   ensName: string
   image?: NimiImage
-  theme: NimiTheme
   profilePhotoRotated: boolean
-  setProfilePhotoRotated: () => void
-}
-
-function getBackgroundImage(themeType: string) {
-  switch (themeType) {
-    case NimiThemeType.NIMI:
-      return null
-    case NimiThemeType.DEVCON:
-      return (
-        <>
-          <BackgroundImage src='https://davi.mypinata.cloud/ipfs/QmctpJVFxCaWx23qNqiJfUhH1wBY9Whq8Armze2pCMpWZk' />
-          <BackgroundImage
-            left={true}
-            src='https://davi.mypinata.cloud/ipfs/QmctpJVFxCaWx23qNqiJfUhH1wBY9Whq8Armze2pCMpWZk'
-          />
-        </>
-      )
-    case NimiThemeType.RAAVE:
-      return (
-        <>
-          <BackgroundImage left={true} src={stars} />
-          <BackgroundImage src={stars} />
-        </>
-      )
-    case NimiThemeType.INFINITE:
-      return <BackgroundImage src={drop} />
-    case NimiThemeType.DAIVINITY:
-      return (
-        <>
-          <BackgroundImage src={daivinityFlowers} />
-          <BackgroundImage left={true} src={daivinityFlowers} />
-        </>
-      )
-    default:
-      return null
-  }
+  setProfilePhotoRotated: () => void,
+  themeType: NimiThemeType
 }
 
 export function ProfilePhoto({
   ensName,
   image,
-  theme,
   profilePhotoRotated,
-  setProfilePhotoRotated
+  setProfilePhotoRotated,
+  themeType
 }: ProfilePhotoProps) {
   return (
     <Container>
       <SwapperContainer profilePhotoRotated={profilePhotoRotated} onClick={setProfilePhotoRotated}>
         <ProfilePicture
           src={image ? image.url : 'https://davi.mypinata.cloud/ipfs/QmTVmDTUNnMChujFptE4gQvo2QH2yBpj4YX2wzVT1mdZEv'}
+          themeType={themeType}
         />
         <QRCodeContainer>
           <StyledQrCode size={110} eyeRadius={15} qrStyle='squares' value={`https://${ensName}.limo`} />
         </QRCodeContainer>
       </SwapperContainer>
-      {getBackgroundImage(theme.type)}
+      {getBackgroundImage(themeType)}
     </Container>
   )
 }
@@ -101,18 +67,12 @@ const SwapperContainer = styled.div<{ profilePhotoRotated: boolean }>`
   }
 `
 
-function getProfilePhotoBorderColor(themeType: NimiThemeType) {
-  switch (themeType) {
-    case NimiThemeType.DEVCON:
-      return 'linear-gradient(rgba(222, 243, 255, 1),rgba(194, 188, 255, 1))'
-    case NimiThemeType.DAIVINITY:
-      return 'linear-gradient(rgba(222, 243, 255, 1), rgba(242, 181, 212, 1))'
-    default:
-      return '#fff'
-  }
+type ProfilePictureProps = {
+  image?: string
+  themeType: NimiThemeType
 }
 
-const ProfilePicture = styled.img<{ image?: string }>`
+const ProfilePicture = styled.img<ProfilePictureProps>`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -122,7 +82,7 @@ const ProfilePicture = styled.img<{ image?: string }>`
   backface-visibility: hidden;
   border-radius: 50%;
   padding: 8px;
-  background: ${({ theme }) => getProfilePhotoBorderColor(theme.type)};
+  background: ${({ themeType }) => getProfilePhotoBorderColor(themeType)};
   box-shadow: 0px 26px 56px -20px rgba(74, 48, 140, 0.25);
 `
 
@@ -147,7 +107,72 @@ const StyledQrCode = styled(QRCode)`
   box-shadow: 0px 26px 56px -20px rgba(74, 48, 140, 0.25);
 `
 
-function getBackgroundImageSpecialStylings(themeType: string, left: boolean | undefined) {
+type BackgroundImageProps = {
+  left?: boolean
+  themeType: NimiThemeType
+}
+
+const BackgroundImage = styled.img<BackgroundImageProps>`
+  position: absolute;
+  bottom: 0;
+
+  ${({ left }) => left && 'transform: scaleX(-1);'}
+  ${({ themeType, left }) => getBackgroundImageSpecialStylings(themeType, left)}
+`
+
+function getProfilePhotoBorderColor(themeType: NimiThemeType) {
+  switch (themeType) {
+    case NimiThemeType.DEVCON:
+      return 'linear-gradient(rgba(222, 243, 255, 1),rgba(194, 188, 255, 1))'
+    case NimiThemeType.RAAVE:
+      return 'linear-gradient(#BED784, #FF8C35, #BED784)'
+    case NimiThemeType.DAIVINITY:
+      return 'linear-gradient(rgba(222, 243, 255, 1), rgba(242, 181, 212, 1))'
+    default:
+      return '#fff'
+  }
+}
+
+function getBackgroundImage(themeType: NimiThemeType) {
+  switch (themeType) {
+    case NimiThemeType.NIMI:
+      return null
+    case NimiThemeType.DEVCON:
+      return (
+        <>
+          <BackgroundImage
+            src='https://davi.mypinata.cloud/ipfs/QmctpJVFxCaWx23qNqiJfUhH1wBY9Whq8Armze2pCMpWZk'
+            themeType={themeType}
+          />
+          <BackgroundImage
+            left={true}
+            src='https://davi.mypinata.cloud/ipfs/QmctpJVFxCaWx23qNqiJfUhH1wBY9Whq8Armze2pCMpWZk'
+            themeType={themeType}
+          />
+        </>
+      )
+    case NimiThemeType.RAAVE:
+      return (
+        <>
+          <BackgroundImage left={true} src={stars} themeType={themeType} />
+          <BackgroundImage src={stars} themeType={themeType} />
+        </>
+      )
+    case NimiThemeType.INFINITE:
+      return <BackgroundImage src={drop} themeType={themeType} />
+    case NimiThemeType.DAIVINITY:
+      return (
+        <>
+          <BackgroundImage src={daivinityFlowers} themeType={themeType} />
+          <BackgroundImage left={true} src={daivinityFlowers} themeType={themeType} />
+        </>
+      )
+    default:
+      return null
+  }
+}
+
+function getBackgroundImageSpecialStylings(themeType: NimiThemeType, left: boolean | undefined) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return ``
@@ -189,11 +214,3 @@ function getBackgroundImageSpecialStylings(themeType: string, left: boolean | un
       return null
   }
 }
-
-const BackgroundImage = styled.img<{ left?: boolean }>`
-  position: absolute;
-  bottom: 0;
-
-  ${({ left }) => left && 'transform: scaleX(-1);'}
-  ${({ theme, left }) => getBackgroundImageSpecialStylings(theme.type, left)}
-`
