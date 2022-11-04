@@ -3,15 +3,16 @@ import styled from 'styled-components'
 import { nimiLinkDetailsExtended } from '../../constants'
 import { useLink } from '../../services'
 import { useToast } from '../../toast'
-import { NimiLinkBaseDetails, NimiLinkType } from '../../types'
+import { NimiLinkBaseDetails, NimiLinkType, NimiThemeType } from '../../types'
 import { renderSVG } from '../NimiComponent/NimiComponent.renders'
 import { NimiLink } from '../NimiLink'
 
 type LinksSectionProps = {
   links: NimiLinkBaseDetails[]
+  themeType: NimiThemeType
 }
 
-export function LinksSection({ links }: LinksSectionProps) {
+export function LinksSection({ links, themeType }: LinksSectionProps) {
   const { getNimiLinkLabel, generateLink } = useLink()
   const { open } = useToast()
 
@@ -27,7 +28,7 @@ export function LinksSection({ links }: LinksSectionProps) {
   return (
     <Container>
       {links.map(link => (
-        <NimiLink key={`${link.type}`} onClick={() => handleLinkClick(link)}>
+        <NimiLink key={`${link.type}`} onClick={() => handleLinkClick(link)} themeType={themeType}>
           {renderSVG(nimiLinkDetailsExtended[link.type].logo)}
           {getNimiLinkLabel(link)}
         </NimiLink>

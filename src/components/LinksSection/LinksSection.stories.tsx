@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import styled from 'styled-components'
 
 import { LinksSection } from './LinksSection'
-import { NimiLinkType } from '../../types'
+import { NimiLinkType, NimiThemeType } from '../../types'
 
 export default {
   title: 'LinksSection',
@@ -40,7 +40,8 @@ Primary.args = {
       content: 'https://t.me/bejzik8'
     },
     { type: NimiLinkType.EMAIL, title: 'Gmail', content: 'bejzik8@gmail.com' }
-  ]
+  ],
+  themeType: NimiThemeType.RAAVE
 }
 
 const Container = styled.div`
