@@ -29,6 +29,7 @@ export const LinkButton = styled(motion.a)<{ lightButton?: boolean }>`
   box-sizing: border-box;
   line-height: 20px;
   font-size: 15px;
+  font-family: 'Archivo', sans-serif;
   border-radius: 1000px;
   box-shadow: 0px 5px 18px rgba(156, 149, 233, 0.2);
   ${({ theme, lightButton }) => getLinkColors(theme.type, lightButton)}
