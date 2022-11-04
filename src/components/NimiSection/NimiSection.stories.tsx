@@ -1,5 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import styled from 'styled-components'
+import { NimiThemeType } from '../../types'
 
 import { NimiSection } from './NimiSection'
 
@@ -15,9 +16,12 @@ export default {
   ]
 } as ComponentMeta<typeof NimiSection>
 
-const Template: ComponentStory<typeof NimiSection> = args => <NimiSection>Mirko Basic</NimiSection>
+const Template: ComponentStory<typeof NimiSection> = args => <NimiSection {...args}>Mirko Basic</NimiSection>
 
 export const Primary = Template.bind({})
+Primary.args = {
+  themeType: NimiThemeType.DAIVINITY
+}
 
 const Content = styled.div`
   max-width: 570px;
