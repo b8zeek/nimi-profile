@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import styled from 'styled-components'
+import { NimiThemeType } from '../../types'
 
 import { POAPWidget } from './POAPWidget'
 
@@ -22,7 +23,8 @@ Primary.args = {
   ensAddress: '0xb492873D940dAc02B5021dFF82282d8374509582',
   widget: {
     tokenIds: ['5742834', '5740068', '5742199', '5733154', '5743494', '5769722']
-  }
+  },
+  themeType: NimiThemeType.DAIVINITY
 }
 
 const Container = styled.div`
