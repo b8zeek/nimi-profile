@@ -51,6 +51,7 @@ const Container = styled.div`
 const DisplayName = styled.h1`
   line-height: 32px;
   font-size: 32px;
+  font-family: 'Archivo', sans-serif;
   font-weight: 600;
   text-align: center;
   margin-bottom: 16px;
@@ -60,6 +61,7 @@ const Description = styled.p`
   width: 80%;
   line-height: 1.65;
   font-size: 14px;
+  font-family: 'Archivo', sans-serif;
   font-weight: 400;
   text-align: center;
   margin: 0 auto 16px;
@@ -111,6 +113,7 @@ const ENSAddressAndName = styled.p`
   display: inline-block;
   line-height: 24px;
   font-size: 14px;
+  font-family: 'Archivo', sans-serif;
   font-weight: 500;
   border-radius: 100px;
   ${({ theme }) => getElementColors(theme.type)}
@@ -119,10 +122,6 @@ const ENSAddressAndName = styled.p`
   cursor: pointer;
   box-shadow: 0px 3px 10px rgba(33, 33, 35, 0.06);
   margin: 0;
-
-  /* & span {
-    color: rgba(52, 62, 223, 1);
-  } */
 `
 
 function getFillColor(themeType: string) {
