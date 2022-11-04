@@ -15,7 +15,14 @@ type UserInfoProps = {
   themeType: NimiThemeType
 }
 
-export function UserInfo({ displayName, description, ensAddress, ensName, setProfilePhotoRotated, themeType }: UserInfoProps) {
+export function UserInfo({
+  displayName,
+  description,
+  ensAddress,
+  ensName,
+  setProfilePhotoRotated,
+  themeType
+}: UserInfoProps) {
   const openENSAddressEtherscan = () => window.open(`https://etherscan.io/address/${ensAddress}`, '_blank')
 
   return (
@@ -183,4 +190,3 @@ function getFillColor(themeType: NimiThemeType) {
       return null
   }
 }
-

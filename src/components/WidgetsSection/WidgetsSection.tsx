@@ -15,7 +15,14 @@ export function WidgetsSection({ ensAddress, ensName, widgets, themeType }: Widg
       {widgets.map(widget => {
         switch (widget.type) {
           case NimiWidgetType.POAP:
-            return <POAPWidget key={`${widget.type}`} ensAddress={ensAddress} widget={widget.context} themeType={themeType} />
+            return (
+              <POAPWidget
+                key={`${widget.type}`}
+                ensAddress={ensAddress}
+                widget={widget.context}
+                themeType={themeType}
+              />
+            )
           case NimiWidgetType.NFTY_UNIVERSAL_DM:
             return <NftyUniversalDM key={`${widget.type}`} ensAddress={ensAddress} ensName={ensName} />
           default:

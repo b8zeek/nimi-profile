@@ -12,7 +12,7 @@ type ProfilePhotoProps = {
   ensName: string
   image?: NimiImage
   profilePhotoRotated: boolean
-  setProfilePhotoRotated: () => void,
+  setProfilePhotoRotated: () => void
   themeType: NimiThemeType
 }
 

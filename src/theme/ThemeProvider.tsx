@@ -50,7 +50,6 @@ type ThemeProviderProps = {
 }
 
 export function ThemeProvider({ theme = { type: NimiThemeType.DEVCON }, children }: ThemeProviderProps) {
-
   return (
     <StyledTheme theme={theme}>
       {children}

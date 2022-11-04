@@ -10,7 +10,11 @@ type NimiSectionProps = {
 }
 
 export function NimiSection({ children, marginBottom, themeType }: NimiSectionProps) {
-  return <Container marginBottom={marginBottom} themeType={themeType}>{children}</Container>
+  return (
+    <Container marginBottom={marginBottom} themeType={themeType}>
+      {children}
+    </Container>
+  )
 }
 
 type ContainerProps = {
@@ -58,4 +62,3 @@ function getSectionColors(themeType: string) {
       return null
   }
 }
-
