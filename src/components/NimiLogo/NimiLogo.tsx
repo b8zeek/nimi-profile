@@ -7,9 +7,26 @@ import NimiLogoInfiniteSVG from '../../assets/svg/nimi-logo-infinite.svg'
 import NimiLogoRaaveSVG from '../../assets/svg/nimi-logo-raave.svg'
 import { NIMI_CARDS_WIDTH } from '../../constants'
 import { NimiThemeType } from '../../types'
-import { NimiTheme } from '../../types/NimiTheme'
 
-function getLogo(themeType: string) {
+type NimiLogoProps = {
+  themeType: NimiThemeType
+}
+
+export function NimiLogo({ themeType }: NimiLogoProps) {
+  return <NimiLogoImage src={getLogo(themeType)} themeType={themeType} />
+}
+
+const NimiLogoImage = styled.img<{ themeType: NimiThemeType }>`
+  display: block;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  margin: 0 auto;
+
+  ${({ themeType }) => getSpecificLogoStyles(themeType)}
+`
+
+function getLogo(themeType: NimiThemeType) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return NimiLogoDefaultSVG
@@ -24,15 +41,7 @@ function getLogo(themeType: string) {
   }
 }
 
-type NimiLogoProps = {
-  theme: NimiTheme
-}
-
-export function NimiLogo({ theme }: NimiLogoProps) {
-  return <NimiLogoImage src={getLogo(theme.type)} />
-}
-
-function getSpecificLogoStyles(themeType: string) {
+function getSpecificLogoStyles(themeType: NimiThemeType) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return css`
@@ -86,13 +95,3 @@ function getSpecificLogoStyles(themeType: string) {
       return null
   }
 }
-
-const NimiLogoImage = styled.img`
-  display: block;
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
-  margin: 0 auto;
-
-  ${({ theme }) => getSpecificLogoStyles(theme.type)}
-`
