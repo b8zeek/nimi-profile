@@ -41,7 +41,7 @@ function getSectionColors(themeType: string) {
         border: 2px solid white;
         background: #fff;
       `
-    case NimiThemeType.NIMI:
+    case NimiThemeType.DEVCON:
       return css`
         border: 2px solid white;
         background: #fff;
