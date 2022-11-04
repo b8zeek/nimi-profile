@@ -61,9 +61,7 @@ const nimi: Nimi = {
 
 export default {
   title: 'Nimi',
-  component: NimiComponent,
-  decorators: [
-  ]
+  component: NimiComponent
 } as ComponentMeta<typeof NimiComponent>
 
 const Template: ComponentStory<typeof NimiComponent> = args => <NimiComponent {...args} />
