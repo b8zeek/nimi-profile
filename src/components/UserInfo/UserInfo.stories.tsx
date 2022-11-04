@@ -1,5 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react'
 import styled from 'styled-components'
+import { NimiThemeType } from '../../types'
 
 import { UserInfo } from './UserInfo'
 
@@ -23,7 +24,8 @@ Primary.args = {
   description: 'Experience technologist focused on crafting future-proof web applications.',
   ensAddress: '0xb492873D940dAc02B5021dFF82282d8374509582',
   ensName: 'bejzik.eth',
-  setProfilePhotoRotated: () => console.log('Rotate profile photo click.')
+  setProfilePhotoRotated: () => console.log('Rotate profile photo click.'),
+  themeType: NimiThemeType.DAIVINITY
 }
 
 const Container = styled.div`
