@@ -16,7 +16,10 @@ export function POAPWidget({ ensAddress, widget, themeType }: POAPWidgetProps) {
 
   return (
     <Container>
-      <POAPHeading showFullCollection={() => window.open(`https://app.poap.xyz/scan/${ensAddress}`, '_blank')} />
+      <POAPHeading
+        showFullCollection={() => window.open(`https://app.poap.xyz/scan/${ensAddress}`, '_blank')}
+        themeType={themeType}
+      />
       <NimiSection themeType={themeType}>
         <POAPList>
           {poapList.map(poap => (
