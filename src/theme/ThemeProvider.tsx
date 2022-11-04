@@ -27,7 +27,6 @@ const GlobalStyles = createGlobalStyle<{ theme: NimiTheme }>`
   body {
     min-height: 100vh;
     position: relative;
-    ${({ theme }) => getTextColor(theme.type)}
     ${({ theme }) => getPageBackground(theme.type)}
   }
 
@@ -77,23 +76,6 @@ function getPageBackground(themeType: string) {
       return 'background: #000;'
     case NimiThemeType.DAIVINITY:
       return 'background: linear-gradient(180deg, #4FC1B3 6.55%, #E6FCFF 84.14%);'
-    default:
-      return null
-  }
-}
-
-function getTextColor(themeType: string) {
-  switch (themeType) {
-    case NimiThemeType.NIMI:
-      return 'color: rgba(33, 33, 35, 0.65);'
-    case NimiThemeType.DEVCON:
-      return 'color: rgba(33, 33, 35, 0.65);'
-    case NimiThemeType.RAAVE:
-      return 'color: rgba(190, 215, 132, 1);'
-    case NimiThemeType.INFINITE:
-      return 'color: #fff;'
-    case NimiThemeType.DAIVINITY:
-      return 'color: #212123;'
     default:
       return null
   }
