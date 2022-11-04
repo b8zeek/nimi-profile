@@ -17,7 +17,7 @@ export function POAPHeading({ showFullCollection, themeType }: POAPHeadingProps)
   return (
     <POAPHeadingContainer>
       <Title themeType={themeType}>POAPs</Title>
-      <NimiLink lightButton onClick={showFullCollection}>
+      <NimiLink lightButton onClick={showFullCollection} themeType={themeType}>
         Full Collection <ExternalLinkSvg />
       </NimiLink>
     </POAPHeadingContainer>
