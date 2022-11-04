@@ -33,9 +33,9 @@ export function NimiComponent({ nimi }: NimiComponentProps) {
         <ProfilePhoto
           ensName={ensName}
           image={image}
-          theme={theme}
           profilePhotoRotated={profilePhotoRotated}
           setProfilePhotoRotated={() => setProfilePhotoRotated(value => !value)}
+          themeType={theme.type}
         />
         <UserInfo
           displayName={displayName}
@@ -43,6 +43,7 @@ export function NimiComponent({ nimi }: NimiComponentProps) {
           ensAddress={ensAddress}
           ensName={ensName}
           setProfilePhotoRotated={() => setProfilePhotoRotated(value => !value)}
+          themeType={theme.type}
         />
         {links?.length !== 0 && <LinksSection links={links} />}
         {widgets?.length !== 0 && <WidgetsSection ensAddress={ensAddress} ensName={ensName} widgets={widgets} />}

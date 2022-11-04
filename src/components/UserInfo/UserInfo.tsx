@@ -20,8 +20,8 @@ export function UserInfo({ displayName, description, ensAddress, ensName, setPro
 
   return (
     <Container>
-      <DisplayName>{displayName}</DisplayName>
-      {description && <Description>{description}</Description>}
+      <DisplayName themeType={themeType}>{displayName}</DisplayName>
+      {description && <Description themeType={themeType}>{description}</Description>}
       <ENSDataContainer>
         <ENSAddressAndName themeType={themeType}>
           <span onClick={openENSAddressEtherscan}>{shortenAddress(ensAddress, 2, 4)}</span> - {ensName}
@@ -49,22 +49,24 @@ const Container = styled.div`
   margin-bottom: 32px;
 `
 
-const DisplayName = styled.h1`
+const DisplayName = styled.h1<{ themeType: NimiThemeType }>`
   line-height: 32px;
   font-size: 32px;
   font-family: 'Archivo', sans-serif;
   font-weight: 600;
   text-align: center;
+  ${({ themeType }) => getTextColor(themeType)}
   margin-bottom: 16px;
 `
 
-const Description = styled.p`
+const Description = styled.p<{ themeType: NimiThemeType }>`
   width: 80%;
   line-height: 1.65;
   font-size: 14px;
   font-family: 'Archivo', sans-serif;
   font-weight: 400;
   text-align: center;
+  ${({ themeType }) => getTextColor(themeType)}
   margin: 0 auto 16px;
 `
 
@@ -80,7 +82,7 @@ const ENSAddressAndName = styled.p<{ themeType: NimiThemeType }>`
   font-family: 'Archivo', sans-serif;
   font-weight: 500;
   border-radius: 100px;
-  ${({ themeType }) => getElementColors(themeType)}
+  ${({ themeType }) => getButtonColors(themeType)}
   padding: 0 10px;
   box-sizing: border-box;
   cursor: pointer;
@@ -97,7 +99,7 @@ const ENSActionsButton = styled.button<{ themeType: NimiThemeType }>`
   align-items: center;
   box-sizing: border-box;
   border-radius: 100px;
-  ${({ themeType }) => getElementColors(themeType)}
+  ${({ themeType }) => getButtonColors(themeType)}
   box-shadow: 0px 3px 10px rgba(33, 33, 35, 0.06);
   cursor: pointer;
   margin-left: 6px;
@@ -111,7 +113,24 @@ const ENSActionsButton = styled.button<{ themeType: NimiThemeType }>`
   }
 `
 
-function getElementColors(themeType: string) {
+function getTextColor(themeType: NimiThemeType) {
+  switch (themeType) {
+    case NimiThemeType.NIMI:
+      return 'color: rgba(33, 33, 35, 0.65);'
+    case NimiThemeType.DEVCON:
+      return 'color: rgba(33, 33, 35, 0.65);'
+    case NimiThemeType.RAAVE:
+      return 'color: rgba(190, 215, 132, 1);'
+    case NimiThemeType.INFINITE:
+      return 'color: #fff;'
+    case NimiThemeType.DAIVINITY:
+      return 'color: #212123;'
+    default:
+      return null
+  }
+}
+
+function getButtonColors(themeType: NimiThemeType) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return css`
@@ -148,7 +167,7 @@ function getElementColors(themeType: string) {
   }
 }
 
-function getFillColor(themeType: string) {
+function getFillColor(themeType: NimiThemeType) {
   switch (themeType) {
     case NimiThemeType.NIMI:
       return '#343EDF'
