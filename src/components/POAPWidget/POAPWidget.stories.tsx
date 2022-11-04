@@ -24,7 +24,7 @@ Primary.args = {
   widget: {
     tokenIds: ['5742834', '5740068', '5742199', '5733154', '5743494', '5769722']
   },
-  themeType: NimiThemeType.DAIVINITY
+  themeType: NimiThemeType.RAAVE
 }
 
 const Container = styled.div`
