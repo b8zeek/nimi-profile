@@ -47,7 +47,7 @@ export function NimiComponent({ nimi }: NimiComponentProps) {
         />
         {links?.length !== 0 && <LinksSection links={links} />}
         {widgets?.length !== 0 && <WidgetsSection ensAddress={ensAddress} ensName={ensName} widgets={widgets} themeType={theme.type} />}
-        {addresses?.length !== 0 && <BlockchainAddressesSection addresses={addresses} />}
+        {addresses?.length !== 0 && <BlockchainAddressesSection addresses={addresses} themeType={theme.type} />}
       </Content>
       <Footer themeType={theme.type} />
     </NimiContainer>
