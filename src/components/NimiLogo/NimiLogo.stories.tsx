@@ -19,9 +19,7 @@ export default {
 const Template: ComponentStory<typeof NimiLogo> = args => <NimiLogo {...args} />
 
 export const Primary = Template.bind({})
-Primary.args = {
-  theme: { type: NimiThemeType.DAIVINITY }
-}
+Primary.args = { themeType: NimiThemeType.DAIVINITY }
 
 const Container = styled.div`
   max-width: 570px;

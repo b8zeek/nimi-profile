@@ -29,7 +29,7 @@ export function NimiComponent({ nimi }: NimiComponentProps) {
     <NimiContainer>
       <Header themeType={theme.type} />
       <Content>
-        <NimiLogo theme={theme} />
+        <NimiLogo themeType={theme.type} />
         <ProfilePhoto
           ensName={ensName}
           image={image}
