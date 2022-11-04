@@ -31,6 +31,8 @@ const Container = styled.header`
   right: 0;
   display: flex;
   justify-content: center;
+  overflow: hidden;
+
   ${({ theme }) => getHeaderBackground(theme.type)}
 `
 
