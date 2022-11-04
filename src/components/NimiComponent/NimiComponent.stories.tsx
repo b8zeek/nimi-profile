@@ -1,8 +1,9 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import styled from 'styled-components'
 
+import { ThemeProvider } from '../../theme'
 import { NimiComponent } from './NimiComponent'
-import { Nimi, NimiImageType, NimiBlockchain, NimiLinkType, NimiWidgetType } from '../../types'
+import { Nimi, NimiImageType, NimiBlockchain, NimiLinkType, NimiWidgetType, NimiThemeType } from '../../types'
 
 const nimi: Nimi = {
   displayName: 'NimiComponent',
@@ -54,7 +55,7 @@ const nimi: Nimi = {
     { type: NimiLinkType.EMAIL, title: 'Gmail', content: 'bejzik8@gmail.com' }
   ],
   theme: {
-    type: 'DAIVINITY'
+    type: 'RAAVE'
   }
 }
 
@@ -63,9 +64,11 @@ export default {
   component: NimiComponent,
   decorators: [
     Story => (
-      <Container>
-        <Story />
-      </Container>
+      <ThemeProvider theme={{ type: NimiThemeType.DEVCON }}>
+        <Container>
+          <Story />
+        </Container>
+      </ThemeProvider>
     )
   ]
 } as ComponentMeta<typeof NimiComponent>
