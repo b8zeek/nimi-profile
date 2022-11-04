@@ -55,7 +55,7 @@ const nimi: Nimi = {
     { type: NimiLinkType.EMAIL, title: 'Gmail', content: 'bejzik8@gmail.com' }
   ],
   theme: {
-    type: 'RAAVE'
+    type: NimiThemeType.RAAVE
   }
 }
 
@@ -63,13 +63,6 @@ export default {
   title: 'Nimi',
   component: NimiComponent,
   decorators: [
-    Story => (
-      <ThemeProvider theme={{ type: NimiThemeType.DEVCON }}>
-        <Container>
-          <Story />
-        </Container>
-      </ThemeProvider>
-    )
   ]
 } as ComponentMeta<typeof NimiComponent>
 
