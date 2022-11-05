@@ -8,33 +8,22 @@ type HeaderProps = {
 }
 
 export function Header({ themeType }: HeaderProps) {
-  return <Container>{themeType === NimiThemeType.NIMI && <NimiCircle />}</Container>
+  return <Container themeType={themeType}>{themeType === NimiThemeType.NIMI && <NimiCircle />}</Container>
 }
 
-function getHeaderBackground(themeType: NimiThemeType) {
-  switch (themeType) {
-    case NimiThemeType.DEVCON:
-      return css`
-        background: url(https://cdn.discordapp.com/attachments/1018317760968806411/1026246674793910372/clouds_1.png);
-        background-repeat: repeat-x;
-      `
-    default:
-      return ''
-  }
-}
-
-const Container = styled.header`
+const Container = styled.header<{ themeType: NimiThemeType }>`
   width: 100%;
   min-height: 350px;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 2;
   display: flex;
   justify-content: center;
   overflow: hidden;
 
-  ${({ theme }) => getHeaderBackground(theme.type)}
+  ${({ themeType }) => getHeaderBackground(themeType)}
 `
 
 const NimiCircle = styled.div`
@@ -53,3 +42,15 @@ const NimiCircle = styled.div`
     top: calc(-100vw + 185px);
   }
 `
+
+function getHeaderBackground(themeType: NimiThemeType) {
+  switch (themeType) {
+    case NimiThemeType.DEVCON:
+      return css`
+        background: url(https://cdn.discordapp.com/attachments/1018317760968806411/1026246674793910372/clouds_1.png);
+        background-repeat: repeat-x;
+      `
+    default:
+      return ''
+  }
+}
