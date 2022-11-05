@@ -1,11 +1,9 @@
 import { RWebShare } from 'react-web-share'
 import styled, { css } from 'styled-components'
 
-// import { ReactComponent as QRSVG } from '../../assets/svg/qr.svg'
-// import { ReactComponent as ShareSVG } from '../../assets/svg/share-new.svg'
 import { NimiThemeType } from '../../types/NimiTheme'
 import { shortenAddress } from '../../utils'
-import { ShareSVG, QRSVG } from '../../assets/svg'
+import { SVG } from '../../assets/svg'
 
 type UserInfoProps = {
   displayName: string
@@ -42,11 +40,11 @@ export function UserInfo({
           }}
         >
           <ENSActionsButton themeType={themeType}>
-            <ShareSVG fill={getFillColor(themeType)} />
+            <SVG type='share' fill={getFillColor(themeType)} />
           </ENSActionsButton>
         </RWebShare>
         <ENSActionsButton themeType={themeType} onClick={setProfilePhotoRotated}>
-          <QRSVG fill={getFillColor(themeType)} />
+          <SVG type='qr-code' fill={getFillColor(themeType)} />
         </ENSActionsButton>
       </ENSDataContainer>
     </Container>
