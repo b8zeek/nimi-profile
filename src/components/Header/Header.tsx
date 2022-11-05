@@ -24,6 +24,7 @@ function getHeaderBackground(themeType: NimiThemeType) {
 }
 
 const Container = styled.header`
+  width: 100%;
   min-height: 350px;
   position: absolute;
   top: 0;
