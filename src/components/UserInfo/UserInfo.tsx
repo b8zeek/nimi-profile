@@ -1,10 +1,11 @@
 import { RWebShare } from 'react-web-share'
 import styled, { css } from 'styled-components'
 
-import { ReactComponent as QRSVG } from '../../assets/svg/qr.svg'
-import { ReactComponent as ShareSVG } from '../../assets/svg/share-new.svg'
+// import { ReactComponent as QRSVG } from '../../assets/svg/qr.svg'
+// import { ReactComponent as ShareSVG } from '../../assets/svg/share-new.svg'
 import { NimiThemeType } from '../../types/NimiTheme'
 import { shortenAddress } from '../../utils'
+import { ShareSVG, QRSVG } from '../../assets/svg'
 
 type UserInfoProps = {
   displayName: string
@@ -41,11 +42,11 @@ export function UserInfo({
           }}
         >
           <ENSActionsButton themeType={themeType}>
-            <ShareSVG />
+            <ShareSVG fill={getFillColor(themeType)} />
           </ENSActionsButton>
         </RWebShare>
         <ENSActionsButton themeType={themeType} onClick={setProfilePhotoRotated}>
-          <QRSVG />
+          <QRSVG fill={getFillColor(themeType)} />
         </ENSActionsButton>
       </ENSDataContainer>
     </Container>
@@ -109,6 +110,8 @@ const ENSActionsButton = styled.button<{ themeType: NimiThemeType }>`
   ${({ themeType }) => getButtonColors(themeType)}
   box-shadow: 0px 3px 10px rgba(33, 33, 35, 0.06);
   cursor: pointer;
+  user-select: none;
+  padding: 0;
   margin-left: 6px;
 
   & .svg-path-fill {
@@ -187,6 +190,6 @@ function getFillColor(themeType: NimiThemeType) {
     case NimiThemeType.DAIVINITY:
       return '#BB6BD9'
     default:
-      return null
+      return undefined
   }
 }
