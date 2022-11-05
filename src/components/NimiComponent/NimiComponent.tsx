@@ -61,6 +61,7 @@ export function NimiComponent({ nimi }: NimiComponentProps) {
 const Container = styled.div<{ themeType: NimiThemeType }>`
   width: 100%;
   min-height: 100vh;
+  position: relative;
   overflow: hidden;
 
   ${({ themeType }) => getPageBackground(themeType)}
@@ -69,7 +70,6 @@ const Container = styled.div<{ themeType: NimiThemeType }>`
 const NimiContent = styled.div`
   max-width: ${NIMI_CARDS_WIDTH}px;
   min-height: 100vh;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
