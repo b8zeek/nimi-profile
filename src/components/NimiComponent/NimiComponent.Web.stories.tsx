@@ -1,12 +1,43 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
-import styled from 'styled-components'
 
 import { NimiComponent } from './NimiComponent'
 import { Nimi, NimiImageType, NimiBlockchain, NimiLinkType, NimiWidgetType, NimiThemeType } from '../../types'
 
+export default {
+  title: 'NimiWeb',
+  component: NimiComponent
+} as ComponentMeta<typeof NimiComponent>
+
+const Template: ComponentStory<typeof NimiComponent> = args => <NimiComponent {...args} />
+
+export const Default = Template.bind({})
+Default.args = {
+  nimi: getNimi(NimiThemeType.NIMI)
+}
+
+export const Devcon = Template.bind({})
+Devcon.args = {
+  nimi: getNimi(NimiThemeType.DEVCON)
+}
+
+export const Raave = Template.bind({})
+Raave.args = {
+  nimi: getNimi(NimiThemeType.RAAVE)
+}
+
+export const Daivinity = Template.bind({})
+Daivinity.args = {
+  nimi: getNimi(NimiThemeType.DAIVINITY)
+}
+
+export const Infinite = Template.bind({})
+Infinite.args = {
+  nimi: getNimi(NimiThemeType.INFINITE)
+}
+
 function getNimi(themeType: NimiThemeType): Nimi {
   return {
-    displayName: 'NimiComponent',
+    displayName: '🍀 Bejzik 🍀',
     image: {
       type: NimiImageType.URL,
       url: 'https://ipfs.io/ipfs/bafkreigkp5o6b5pwgxfbcyt2iz7afvhmupacqxv2y2af7ufw52yvtni7bi'
@@ -21,8 +52,7 @@ function getNimi(themeType: NimiThemeType): Nimi {
         blockchain: NimiBlockchain.ETHEREUM
       }
     ],
-    description:
-      'Host your personal page on your ENS domain! Nimi 0.1.alpha live on EthereumMainnet:) #devconnect #ETHAmsterdam',
+    description: 'Experience technologist focused on crafting future-proof web applications.',
     ensAddress: '0x26358E62C2eDEd350e311bfde51588b8383A9315',
     widgets: [
       {
@@ -59,45 +89,3 @@ function getNimi(themeType: NimiThemeType): Nimi {
     }
   }
 }
-
-export default {
-  title: 'Nimi',
-  component: NimiComponent
-} as ComponentMeta<typeof NimiComponent>
-
-const Template: ComponentStory<typeof NimiComponent> = args => <NimiComponent {...args} />
-
-export const Default = Template.bind({})
-Default.args = {
-  nimi: getNimi(NimiThemeType.NIMI)
-}
-
-export const Devcon = Template.bind({})
-Devcon.args = {
-  nimi: getNimi(NimiThemeType.DEVCON)
-}
-
-export const Raave = Template.bind({})
-Raave.args = {
-  nimi: getNimi(NimiThemeType.RAAVE)
-}
-
-export const Daivinity = Template.bind({})
-Daivinity.args = {
-  nimi: getNimi(NimiThemeType.DAIVINITY)
-}
-
-export const Infinite = Template.bind({})
-Infinite.args = {
-  nimi: getNimi(NimiThemeType.INFINITE)
-}
-
-const Container = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  align-items: center;
-  overflow: hidden;
-`
