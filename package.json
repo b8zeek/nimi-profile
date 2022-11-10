@@ -1,8 +1,8 @@
 {
-  "name": "nimi",
-  "version": "1.0.0",
+  "name": "@bejzik8/nimi-component",
+  "version": "0.0.3",
   "description": "Nimi component.",
-  "main": "src/index.ts",
+  "main": "dist/bejzik8-nimi-component.cjs.js",
   "files": [
     "src/**/*"
   ],
@@ -44,7 +44,18 @@
     "yup": "^0.32.11"
   },
   "peerDependencies": {
+    "axios": "^0.27.2",
+    "bitcoin-address-validation": "^2.2.1",
+    "framer-motion": "^7.6.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-qrcode-logo": "^2.8.0",
+    "react-web-share": "^2.0.2",
+    "styled-components": "^5.3.6",
+    "validator": "^13.7.0",
+    "yup": "^0.32.11"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/bejzik8"
   }
 }
