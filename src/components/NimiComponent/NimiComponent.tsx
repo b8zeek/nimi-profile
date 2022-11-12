@@ -146,7 +146,6 @@ const BackgroundImage = styled.img<{ shouldSpin?: boolean }>`
     `}
 `
 
-
 function getPageBackground(themeType: NimiThemeType) {
   switch (themeType) {
     case NimiThemeType.NIMI:

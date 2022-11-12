@@ -8,7 +8,13 @@ import { NIMI_CARDS_WIDTH } from '../../constants'
 export default {
   title: 'NimiMobile',
   component: NimiComponent,
-  decorators: [Story => <Container><Story /></Container>]
+  decorators: [
+    Story => (
+      <Container>
+        <Story />
+      </Container>
+    )
+  ]
 } as ComponentMeta<typeof NimiComponent>
 
 const Template: ComponentStory<typeof NimiComponent> = args => <NimiComponent {...args} />

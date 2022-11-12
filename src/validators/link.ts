@@ -40,7 +40,11 @@ export const nimiLinkValidator: Yup.SchemaOf<NimiLinkBaseDetails> = Yup.object({
 
         // Email
         if (linkType === NimiLinkType.EMAIL) {
-          if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value as string)) {
+          if (
+            !/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+              value as string
+            )
+          ) {
             throw new Error('Invalid email address')
           }
           return true
