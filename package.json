@@ -1,6 +1,6 @@
 {
   "name": "@bejzik8/nimi-component",
-  "version": "0.0.8",
+  "version": "0.0.10",
   "description": "Nimi component.",
   "type": "module",
   "module": "dist/esm/index.js",
@@ -12,7 +12,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "prettier": "npx prettier --write .",
-    "rollup": "rm -rf dist && rollup -c"
+    "rollup": "rm -rf dist && rollup -c",
+    "prepublishOnly": "npm run rollup"
   },
   "keywords": [
     "nimi"
