@@ -58,6 +58,6 @@ export function filterEmptyFields(nimi: Nimi): Nimi {
  * @param reactElement - react element
  * @returns react element's innerHTML
  */
-export function encodeSVGToDataURI(reactElement) {
-  return 'data:image/svg+xml,' + escape(ReactDOMServer.renderToStaticMarkup(reactElement))
-}
+// export function encodeSVGToDataURI(reactElement) {
+//   return 'data:image/svg+xml,' + escape(ReactDOMServer.renderToStaticMarkup(reactElement))
+// }

@@ -56,22 +56,18 @@ describe('Nimi Validators', () => {
       ensName: 'nimi.eth',
       links: [
         {
-          label: 'Twitter',
           type: 'TWITTER' as NimiLinkType,
           content: '0xNimi'
         },
         {
-          label: 'Github',
           type: 'GITHUB' as NimiLinkType,
           content: 'nimi-app'
         },
         {
-          label: 'Telegram',
           type: 'TELEGRAM' as NimiLinkType,
           content: '0xNimi'
         },
         {
-          label: 'Website',
           type: 'URL' as NimiLinkType,
           content: 'https://nimi.eth.limo'
         }

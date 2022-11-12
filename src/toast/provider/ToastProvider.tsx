@@ -16,7 +16,7 @@ export function ToastProvider(props: { children: ReactNode }) {
 
   const open = (content: ReactNode) => setToasts(currentToasts => [...currentToasts, { id: nanoid(), content }])
 
-  const close = id => setToasts(currentToasts => currentToasts.filter(toast => toast.id !== id))
+  const close = (id: string) => setToasts(currentToasts => currentToasts.filter(toast => toast.id !== id))
 
   const contextValue = useMemo(() => ({ open, close }), [])
 
