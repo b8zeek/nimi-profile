@@ -1,4 +1,3 @@
-import isEmail from 'validator/lib/isEmail'
 import * as Yup from 'yup'
 
 import { NimiLinkBaseDetails, NimiLinkType } from '../types'
@@ -35,13 +34,13 @@ export const nimiLinkValidator: Yup.SchemaOf<NimiLinkBaseDetails> = Yup.object({
         }
 
         // Invalid link type
-        if (!NimiLinkType[linkType]) {
+        if (!Object.values(NimiLinkType).includes(linkType)) {
           throw new Error('Invalid NimiLinkType')
         }
 
         // Email
         if (linkType === NimiLinkType.EMAIL) {
-          if (!isEmail(value)) {
+          if (!/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(value as string)) {
             throw new Error('Invalid email address')
           }
           return true

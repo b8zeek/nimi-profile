@@ -1,4 +1,4 @@
-import ReactDOMServer from 'react-dom/server'
+// import ReactDOMServer from 'react-dom/server'
 
 import { NIMI_BLOCKCHAIN_DETAILS } from '../constants'
 import { Nimi, NimiBlockchain } from '../types'
