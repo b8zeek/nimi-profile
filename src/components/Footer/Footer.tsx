@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 import styled from 'styled-components'
 
-import { ReactComponent as NimiTextSVG } from 'assets/svg/animated-footer.svg'
-import nimiInfiniteFooterImage from 'assets/svg/infinite-footer-1.png'
-import nimiRaaveFooterImage from 'assets/svg/nimi-footer-raave.png'
-import { ReactComponent as NimiLogoSVG } from 'assets/svg/nimi-logo-default.svg'
+import { ReactComponent as NimiTextSVG } from '../../assets/svg/animated-footer.svg'
+import nimiInfiniteFooterImage from '../../assets/svg/infinite-footer-1.png'
+import nimiRaaveFooterImage from '../../assets/svg/nimi-footer-raave.png'
+import { ReactComponent as NimiLogoSVG } from '../../assets/svg/nimi-logo-default.svg'
 import { NIMI_CARDS_WIDTH } from '../../constants'
 import { NimiThemeType } from 'types'
 

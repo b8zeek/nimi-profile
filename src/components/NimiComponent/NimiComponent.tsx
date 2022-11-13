@@ -14,7 +14,7 @@ import { NIMI_CARDS_WIDTH } from '../../constants'
 import { Nimi, NimiThemeType } from 'types'
 import { nimiValidator } from 'validators'
 
-import daivinityBackground from 'assets/svg/daivinity-bg.png'
+import daivinityBackground from '../../assets/svg/daivinity-bg.png'
 
 type NimiComponentProps = {
   nimi: Nimi

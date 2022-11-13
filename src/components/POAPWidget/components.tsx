@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { ReactComponent as ExternalLinkSvg } from 'assets/svg/common/external-link.svg'
+import { ReactComponent as ExternalLinkSvg } from '../../assets/svg/common/external-link.svg'
 import { NimiLink } from 'components/NimiLink'
 import { NimiThemeType } from 'types'
 
