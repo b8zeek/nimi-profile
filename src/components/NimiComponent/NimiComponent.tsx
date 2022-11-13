@@ -1,19 +1,19 @@
 import { useState } from 'react'
 import styled, { css, keyframes } from 'styled-components'
 
-import {
-  BlockchainAddressesSection,
-  Footer,
-  Header,
-  LinksSection,
-  NimiLogo,
-  ProfilePhoto,
-  UserInfo,
-  WidgetsSection
-} from '../../components'
+import { Header } from '../Header'
+import { NimiLogo } from '../NimiLogo'
+import { ProfilePhoto } from '../ProfilePhoto'
+import { UserInfo } from '../UserInfo'
+import { LinksSection } from '../LinksSection'
+import { BlockchainAddressesSection } from '../BlockchainAddressesSection'
+import { WidgetsSection } from '../WidgetsSection'
+import { Footer } from '../Footer'
+
 import { NIMI_CARDS_WIDTH } from '../../constants'
 import { Nimi, NimiThemeType } from '../../types'
 import { nimiValidator } from '../../validators'
+
 import daivinityBackground from '../../assets/svg/daivinity-bg.png'
 
 type NimiComponentProps = {
