@@ -1,10 +1,10 @@
 import { Fragment } from 'react'
 import styled from 'styled-components'
 
-import { NimiComponent } from '../components'
-import { ThemeProvider } from '../theme'
-import { Nimi } from '../types'
-import { filterEmptyFields } from '../utils'
+import { NimiComponent } from 'components'
+import { ThemeProvider } from 'theme'
+import { Nimi } from 'types'
+import { filterEmptyFields } from 'utils'
 
 type NimiCardProps = {
   nimi: Nimi

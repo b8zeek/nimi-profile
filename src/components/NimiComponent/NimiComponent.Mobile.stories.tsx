@@ -2,7 +2,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import styled from 'styled-components'
 
 import { NimiComponent } from './NimiComponent'
-import { Nimi, NimiImageType, NimiBlockchain, NimiLinkType, NimiWidgetType, NimiThemeType } from '../../types'
+import { Nimi, NimiImageType, NimiBlockchain, NimiLinkType, NimiWidgetType, NimiThemeType } from 'types'
 import { NIMI_CARDS_WIDTH } from '../../constants'
 
 export default {

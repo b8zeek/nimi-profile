@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components'
 
-import NimiLogoDaivinitySVG from '../../assets/svg/nimi-logo-daivinity.svg'
-import NimiLogoDefaultSVG from '../../assets/svg/nimi-logo-default.svg'
-import NimiLogoDevconSVG from '../../assets/svg/nimi-logo-devcon.svg'
-import NimiLogoInfiniteSVG from '../../assets/svg/nimi-logo-infinite.svg'
-import NimiLogoRaaveSVG from '../../assets/svg/nimi-logo-raave.svg'
+import NimiLogoDaivinitySVG from 'assets/svg/nimi-logo-daivinity.svg'
+import NimiLogoDefaultSVG from 'assets/svg/nimi-logo-default.svg'
+import NimiLogoDevconSVG from 'assets/svg/nimi-logo-devcon.svg'
+import NimiLogoInfiniteSVG from 'assets/svg/nimi-logo-infinite.svg'
+import NimiLogoRaaveSVG from 'assets/svg/nimi-logo-raave.svg'
 import { NIMI_CARDS_WIDTH } from '../../constants'
-import { NimiThemeType } from '../../types'
+import { NimiThemeType } from 'types'
 
 type NimiLogoProps = {
   themeType: NimiThemeType

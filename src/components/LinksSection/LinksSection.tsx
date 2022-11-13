@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 import { nimiLinkDetailsExtended } from '../../constants'
-import { useLink } from '../../services'
-import { useToast } from '../../toast'
-import { NimiLinkBaseDetails, NimiLinkType, NimiThemeType } from '../../types'
-import { renderSVG } from '../NimiComponent/NimiComponent.renders'
-import { NimiLink } from '../NimiLink'
+import { useLink } from 'services'
+import { useToast } from 'toast'
+import { NimiLinkBaseDetails, NimiLinkType, NimiThemeType } from 'types'
+import { renderSVG } from 'components/NimiComponent/NimiComponent.renders'
+import { NimiLink } from 'components/NimiLink'
 
 type LinksSectionProps = {
   links: NimiLinkBaseDetails[]

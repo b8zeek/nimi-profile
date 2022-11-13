@@ -1,6 +1,6 @@
 import * as Yup from 'yup'
 
-import { NimiImageType } from '../types'
+import { NimiImageType } from 'types'
 
 /**
  * The image schema definition and validator

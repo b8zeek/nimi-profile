@@ -1,6 +1,6 @@
-import { NimiThemeType, NimiWidget, NimiWidgetType } from '../../types'
-import { NftyUniversalDM } from '../NftyUniversalDM'
-import { POAPWidget } from '../POAPWidget'
+import { NimiThemeType, NimiWidget, NimiWidgetType } from 'types'
+import { NftyUniversalDM } from 'components/NftyUniversalDM'
+import { POAPWidget } from 'components/POAPWidget'
 
 type WidgetsSectionProps = {
   ensAddress: string

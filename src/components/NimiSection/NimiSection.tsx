@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 
-import { NimiThemeType } from '../../types/NimiTheme'
+import { NimiThemeType } from 'types'
 
 type NimiSectionProps = {
   children: ReactNode

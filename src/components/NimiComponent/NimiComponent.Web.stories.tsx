@@ -1,7 +1,7 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 
 import { NimiComponent } from './NimiComponent'
-import { Nimi, NimiImageType, NimiBlockchain, NimiLinkType, NimiWidgetType, NimiThemeType } from '../../types'
+import { Nimi, NimiImageType, NimiBlockchain, NimiLinkType, NimiWidgetType, NimiThemeType } from 'types'
 
 export default {
   title: 'NimiWeb',

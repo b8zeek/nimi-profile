@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import styled from 'styled-components'
 
 import { BlockchainAddressesSection } from './BlockchainAddressesSection'
-import { NimiBlockchain, NimiThemeType } from '../../types'
+import { NimiBlockchain, NimiThemeType } from 'types'
 
 export default {
   title: 'BlockchainAddressesSection',

@@ -1,6 +1,6 @@
 import { ComponentStory, ComponentMeta } from '@storybook/react'
 import styled from 'styled-components'
-import { NimiThemeType } from '../../types'
+import { NimiThemeType } from 'types'
 
 import { NimiSection } from './NimiSection'
 

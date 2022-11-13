@@ -1,7 +1,7 @@
 // import ReactDOMServer from 'react-dom/server'
 
 import { NIMI_BLOCKCHAIN_DETAILS } from '../constants'
-import { Nimi, NimiBlockchain } from '../types'
+import { Nimi, NimiBlockchain } from 'types'
 /**
  * Returns true if value is proper url
  * @param urlString

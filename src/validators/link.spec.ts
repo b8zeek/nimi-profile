@@ -1,4 +1,4 @@
-import { NimiLinkBaseDetails, NimiLinkType } from '../types'
+import { NimiLinkBaseDetails, NimiLinkType } from 'types'
 import { nimiLinkValidator } from './link'
 
 describe('Validators', () => {

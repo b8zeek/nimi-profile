@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 import { NIMI_BLOCKCHAIN_LOGO_URL } from '../../constants'
-import { useToast } from '../../toast'
-import { Address } from '../Address'
-import { renderSVG } from '../NimiComponent/NimiComponent.renders'
-import { NimiSection } from '../NimiSection'
-import { NimiBlockchainAddress, NimiThemeType } from '../../types'
+import { useToast } from 'toast'
+import { Address } from 'components/Address'
+import { renderSVG } from 'components/NimiComponent/NimiComponent.renders'
+import { NimiSection } from 'components/NimiSection'
+import { NimiBlockchainAddress, NimiThemeType } from 'types'
 
 type BlockchainAddressesSectionProps = {
   addresses: NimiBlockchainAddress[]

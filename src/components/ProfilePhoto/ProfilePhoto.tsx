@@ -1,12 +1,11 @@
 import { QRCode } from 'react-qrcode-logo'
 import styled, { css } from 'styled-components'
 
-import drop from '../../assets/svg/backdrop-opt.png'
-import daivinityFlowers from '../../assets/svg/daivinity-flowers.png'
-import stars from '../../assets/svg/stars-left-t2.svg'
+import drop from 'assets/svg/backdrop-opt.png'
+import daivinityFlowers from 'assets/svg/daivinity-flowers.png'
+import stars from 'assets/svg/stars-left-t2.svg'
 import { NIMI_CARDS_WIDTH } from '../../constants'
-import { NimiImage, NimiThemeType } from '../../types'
-import { NimiTheme } from '../../types/NimiTheme'
+import { NimiImage, NimiThemeType } from 'types'
 
 type ProfilePhotoProps = {
   ensName: string

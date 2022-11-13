@@ -1,5 +1,5 @@
-import { NimiPOAPWidgetContext, NimiThemeType } from '../../types'
-import { NimiSection } from '../NimiSection'
+import { NimiPOAPWidgetContext, NimiThemeType } from 'types'
+import { NimiSection } from 'components/NimiSection'
 import { Container, POAPHeading, POAPItem, POAPList } from './components'
 import { useFetchPOAPs } from './useFetchPOAPs'
 

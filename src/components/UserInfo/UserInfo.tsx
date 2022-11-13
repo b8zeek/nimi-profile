@@ -1,9 +1,9 @@
 import { RWebShare } from 'react-web-share'
 import styled, { css } from 'styled-components'
 
-import { NimiThemeType } from '../../types/NimiTheme'
-import { shortenAddress } from '../../utils'
-import { SVG } from '../../assets/svg'
+import { NimiThemeType } from 'types/NimiTheme'
+import { shortenAddress } from 'utils'
+import { SVG } from 'assets/svg'
 
 type UserInfoProps = {
   displayName: string

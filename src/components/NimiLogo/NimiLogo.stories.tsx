@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import styled from 'styled-components'
 
 import { NimiLogo } from './NimiLogo'
-import { NimiThemeType } from '../../types'
+import { NimiThemeType } from 'types'
 
 export default {
   title: 'NimiLogo',

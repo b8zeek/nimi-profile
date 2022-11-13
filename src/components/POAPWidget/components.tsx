@@ -1,8 +1,8 @@
 import styled from 'styled-components'
 
-import { ReactComponent as ExternalLinkSvg } from '../../assets/svg/common/external-link.svg'
-import { NimiLink } from '../../components/NimiLink'
-import { NimiThemeType } from '../../types'
+import { ReactComponent as ExternalLinkSvg } from 'assets/svg/common/external-link.svg'
+import { NimiLink } from 'components/NimiLink'
+import { NimiThemeType } from 'types'
 
 export const Container = styled.div`
   margin-bottom: 25px;

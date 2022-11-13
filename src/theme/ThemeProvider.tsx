@@ -1,10 +1,9 @@
 import { ReactNode } from 'react'
 import styled, { createGlobalStyle, css, keyframes, ThemeProvider as StyledTheme } from 'styled-components'
 
-import daivinityBackground from '../assets/svg/daivinity-bg.png'
+import daivinityBackground from 'assets/svg/daivinity-bg.png'
 import { NIMI_CARDS_WIDTH } from '../constants'
-import { NimiThemeType } from '../types'
-import { NimiTheme } from '../types/NimiTheme'
+import { NimiTheme, NimiThemeType } from 'types'
 
 const GlobalStyles = createGlobalStyle<{ theme: NimiTheme }>`
   * {

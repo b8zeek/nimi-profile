@@ -2,7 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react'
 import styled from 'styled-components'
 
 import { ProfilePhoto } from './ProfilePhoto'
-import { NimiImageType, NimiThemeType } from '../../types'
+import { NimiImageType, NimiThemeType } from 'types'
 
 export default {
   title: 'ProfilePhoto',

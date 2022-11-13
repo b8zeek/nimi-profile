@@ -1,4 +1,4 @@
-import { Nimi, NimiBlockchain, NimiImageType, NimiLinkType, NimiThemeType } from '../types'
+import { Nimi, NimiBlockchain, NimiImageType, NimiLinkType, NimiThemeType } from 'types'
 import { nimiValidator, validateNimi } from './validators'
 
 describe('Nimi Validators', () => {

@@ -1,4 +1,4 @@
-import { isValidUrl } from '../utils'
+import { isValidUrl } from 'utils'
 
 const DISCORD_USERNAME_PATTERN = /\w+#\d{4}/i
 
