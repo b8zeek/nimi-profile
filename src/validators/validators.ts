@@ -5,7 +5,7 @@ import { NimiWidgetType } from '../types/NimiWidget'
 import { validators as addressValidators, evmAddress as evmAddressValidator } from './blockchainAddress'
 import { nimiImageValidator } from './image'
 import { nimiLinkValidator } from './link'
-import { themeScheme } from './validators'
+import { themeScheme } from './themeScheme'
 import { nimiPOAPWidgetContextValidator } from './widgets'
 
 // re-exports
