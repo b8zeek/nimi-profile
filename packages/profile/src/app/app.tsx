@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import NxWelcome from './nx-welcome'
 
 import { NimiComponent } from '@nimi/components'
-import { NimiThemeType, NimiLinkType, NimiImageType, NimiBlockchain, Nimi, NimiWidgetType } from '@nimi/components'
+import { NimiThemeType, NimiLinkType, NimiImageType, NimiBlockchain, Nimi, NimiWidgetType } from '@nimi/types'
 
 export function App() {
   return (
