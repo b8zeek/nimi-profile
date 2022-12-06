@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 import NxWelcome from './nx-welcome'
 
+import { Components } from '@nimi/components'
+
 const StyledApp = styled.div`
   // Your style here
 `
@@ -8,7 +10,8 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      <NxWelcome title='profile' />
+      <Components />
+      {/* <NxWelcome title='profile' /> */}
     </StyledApp>
   )
 }

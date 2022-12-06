@@ -2,7 +2,9 @@
   "name": "nimi",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "profile-dev": "nx run profile:serve:development"
+  },
   "private": true,
   "dependencies": {
     "core-js": "^3.6.5",
