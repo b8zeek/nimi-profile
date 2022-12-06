@@ -1,4 +1,6 @@
-import { NimiLinkBaseDetails, NimiLinkType } from '../types'
+// TODO: MIRKO CHECK THE IMPORT ISSUE LATER!
+// @ts-ignore
+import { NimiLinkBaseDetails, NimiLinkType } from '@nimi/types'
 import { nimiLinkValidator } from './link'
 
 describe('Validators', () => {

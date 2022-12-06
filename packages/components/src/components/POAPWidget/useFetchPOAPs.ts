@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import { fetchPOAPsWithENS, fetchPOAPsWithTokens } from '../../api'
-import { NimiPOAPWidgetContext, POAPToken } from '../../types'
+import { NimiPOAPWidgetContext, POAPToken } from '@nimi/types'
 
 export function useFetchPOAPs(ensAddress: string, widget?: NimiPOAPWidgetContext) {
   const [loading, setLoading] = useState(true)

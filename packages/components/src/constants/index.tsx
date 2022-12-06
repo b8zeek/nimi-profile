@@ -27,7 +27,7 @@ import { ReactComponent as WebsiteLogo } from '../assets/svg/links/website.svg'
 import { ReactComponent as WechatLogo } from '../assets/svg/links/wechat.svg'
 import { ReactComponent as WhatsappLogo } from '../assets/svg/links/whatsapp.svg'
 import { ReactComponent as YoutubeLogo } from '../assets/svg/links/youtube.svg'
-import { NimiBlockchain, NimiBlockchainDetails, NimiLinkType } from '../types'
+import { NimiBlockchain, NimiBlockchainDetails, NimiLinkType } from '@nimi/types'
 
 export const nimiLinkDetailsExtended: Record<
   NimiLinkType,

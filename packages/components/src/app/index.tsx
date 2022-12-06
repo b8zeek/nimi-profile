@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import { NimiComponent } from '../components'
 import { ThemeProvider } from '../theme'
-import { Nimi } from '../types'
+import { Nimi } from '@nimi/types'
 import { filterEmptyFields } from '../utils'
 
 type NimiCardProps = {

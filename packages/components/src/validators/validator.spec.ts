@@ -1,4 +1,6 @@
-import { Nimi, NimiBlockchain, NimiImageType, NimiLinkType, NimiThemeType } from '../types'
+// TODO: MIRKO CHECK THE IMPORT ISSUE LATER!
+// @ts-ignore
+import { Nimi, NimiBlockchain, NimiImageType, NimiLinkType, NimiThemeType } from '@nimi/types'
 import { nimiValidator, validateNimi } from './validators'
 
 describe('Nimi Validators', () => {

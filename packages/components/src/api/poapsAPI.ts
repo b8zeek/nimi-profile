@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-import { POAPToken } from '../types'
+import { POAPToken } from '@nimi/types'
 
 export function fetchPOAPsWithENS(ensAddress: string): Promise<{ data: POAPToken[] }> {
   return axios.get(`https://api.poap.tech/actions/scan/${ensAddress}`)

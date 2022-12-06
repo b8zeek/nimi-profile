@@ -6,7 +6,7 @@ import NimiLogoDevconSVG from '../../assets/svg/nimi-logo-devcon.svg'
 import NimiLogoInfiniteSVG from '../../assets/svg/nimi-logo-infinite.svg'
 import NimiLogoRaaveSVG from '../../assets/svg/nimi-logo-raave.svg'
 import { NIMI_CARDS_WIDTH } from '../../constants'
-import { NimiThemeType } from '../../types'
+import { NimiThemeType } from '@nimi/types'
 
 type NimiLogoProps = {
   themeType: NimiThemeType

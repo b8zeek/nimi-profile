@@ -5,7 +5,7 @@ import { useToast } from '../../toast'
 import { Address } from '../Address'
 import { renderSVG } from '../NimiComponent/NimiComponent.renders'
 import { NimiSection } from '../NimiSection'
-import { NimiBlockchainAddress, NimiThemeType } from '../../types'
+import { NimiBlockchainAddress, NimiThemeType } from '@nimi/types'
 
 type BlockchainAddressesSectionProps = {
   addresses: NimiBlockchainAddress[]

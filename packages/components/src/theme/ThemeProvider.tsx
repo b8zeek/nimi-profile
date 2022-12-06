@@ -3,7 +3,7 @@ import styled, { createGlobalStyle, css, keyframes, ThemeProvider as StyledTheme
 
 import daivinityBackground from 'assets/svg/daivinity-bg.png'
 import { NIMI_CARDS_WIDTH } from '../constants'
-import { NimiTheme, NimiThemeType } from '../types'
+import { NimiTheme, NimiThemeType } from '@nimi/types'
 
 const GlobalStyles = createGlobalStyle<{ theme: NimiTheme }>`
   * {

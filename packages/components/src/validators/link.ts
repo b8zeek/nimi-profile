@@ -1,6 +1,6 @@
 import * as Yup from 'yup'
 
-import { NimiLinkBaseDetails, NimiLinkType } from '../types'
+import { NimiLinkBaseDetails, NimiLinkType } from '@nimi/types'
 import { isValidUrl } from '../utils'
 import { isDiscordUsername } from './discord'
 import { isLensterUsername } from './lenster'

@@ -11,7 +11,7 @@ import { WidgetsSection } from '../WidgetsSection'
 import { Footer } from '../Footer'
 
 import { NIMI_CARDS_WIDTH } from '../../constants'
-import { Nimi, NimiThemeType } from '../../types'
+import { Nimi, NimiThemeType } from '@nimi/types'
 import { nimiValidator } from '../../validators'
 
 import daivinityBackground from '../../assets/svg/daivinity-bg.png'

@@ -6,7 +6,7 @@ import nimiInfiniteFooterImage from '../../assets/svg/infinite-footer-1.png'
 import nimiRaaveFooterImage from '../../assets/svg/nimi-footer-raave.png'
 import { ReactComponent as NimiLogoSVG } from '../../assets/svg/nimi-logo-default.svg'
 import { NIMI_CARDS_WIDTH } from '../../constants'
-import { NimiThemeType } from '../../types'
+import { NimiThemeType } from '@nimi/types'
 
 function getNimiFooterImage(themeType: NimiThemeType) {
   switch (themeType) {

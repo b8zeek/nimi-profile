@@ -1,4 +1,4 @@
-import { NimiThemeType, NimiWidget, NimiWidgetType } from '../../types'
+import { NimiThemeType, NimiWidget, NimiWidgetType } from '@nimi/types'
 import { NftyUniversalDM } from '../NftyUniversalDM'
 import { POAPWidget } from '../POAPWidget'
 

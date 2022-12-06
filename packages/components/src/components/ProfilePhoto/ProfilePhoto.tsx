@@ -5,7 +5,7 @@ import drop from '../../assets/svg/backdrop-opt.png'
 import daivinityFlowers from '../../assets/svg/daivinity-flowers.png'
 import stars from '../../assets/svg/stars-left-t2.svg'
 import { NIMI_CARDS_WIDTH } from '../../constants'
-import { NimiImage, NimiThemeType } from '../../types'
+import { NimiImage, NimiThemeType } from '@nimi/types'
 
 type ProfilePhotoProps = {
   ensName: string

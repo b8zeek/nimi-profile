@@ -1,5 +1,5 @@
 import { nimiLinkDetailsExtended } from '../constants'
-import { NimiLinkBaseDetails, NimiLinkType } from '../types'
+import { NimiLinkBaseDetails, NimiLinkType } from '@nimi/types'
 import { isValidUrl } from '../utils'
 
 export function useLink() {

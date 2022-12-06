@@ -1,6 +1,6 @@
 import * as Yup from 'yup'
 
-import { Nimi, NimiBlockchain, NimiBlockchainAddress, NimiWidgetType } from '../types'
+import { Nimi, NimiBlockchain, NimiBlockchainAddress, NimiWidgetType } from '@nimi/types'
 import { validators as addressValidators, evmAddress as evmAddressValidator } from './blockchainAddress'
 import { nimiImageValidator } from './image'
 import { nimiLinkValidator } from './link'
