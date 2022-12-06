@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nimi/components": ["packages/components/src/index.ts"]
+      "@nimi/components": ["packages/components/src/index.ts"],
+      "@nimi/types": ["packages/types/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
