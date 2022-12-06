@@ -34,8 +34,20 @@
   "generators": {
     "@nrwl/react": {
       "application": {
+        "style": "styled-components",
+        "unitTestRunner": "none",
+        "linter": "eslint",
         "babel": true
+      },
+      "component": {
+        "style": "styled-components"
+      },
+      "library": {
+        "style": "styled-components",
+        "unitTestRunner": "none",
+        "linter": "eslint"
       }
     }
-  }
+  },
+  "defaultProject": "profile"
 }

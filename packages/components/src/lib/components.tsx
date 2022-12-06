@@ -3,10 +3,6 @@ import styled from 'styled-components';
 /* eslint-disable-next-line */
 export interface ComponentsProps {}
 
-const StyledComponents = styled.div`
-  color: pink;
-`;
-
 export function Components(props: ComponentsProps) {
   return (
     <StyledComponents>
@@ -16,3 +12,7 @@ export function Components(props: ComponentsProps) {
 }
 
 export default Components;
+
+const StyledComponents = styled.div`
+  color: pink;
+`;
